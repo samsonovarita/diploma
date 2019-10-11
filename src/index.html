@@ -2,11 +2,46 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Webpack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Сервис для анализа происходящих в мире событий. Его задача — установить, насколько популярны в мире новости на определённую тему."/>
+    <meta name="author" content="Маргарита Самсонова"/>
+    <title>Диплом</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="page">
+        <div class="content">
+            <section class="search section">
+                <header class="header section">
+                    <div class="header__logo"></div>
+                    <div class="header__navigation">
+                        <div class="header__navigation-item header__navigation-item_active">Главная</div>
+                        <div class="header__navigation-item">О проекте</div> 
+                    </div>
+                </header>
+                <h1 class="search__title">Что в мире творится?</h1>
+                <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в носотях за прошедшую неделю.</h2>
+                <form class="search__control">
+                    <input class="search__input" type="text" placeholder="Природа">
+                    <button class="search__button" type="submit">Искать</button>
+                </form>
+            </section>
+            <section class="results">
+                <h2 class="results__title">Результаты поиска</h2>
+                <h3 class="results__analysis">Посмотреть аналитику</h3>
+                <div class="results__list">
+                    <div class="result-card">
+                        <div class="result-card__image"></div>
+                        <div class="result-card__date"></div>
+                        <div class="result-card__title"></div>
+                        <p class="result-card__text"></p>
+                        <p class="result-card__source"></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>

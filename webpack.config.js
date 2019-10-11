@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const webpack = require('webpack');
 const isDev = process.env.NODE_ENV === 'development';
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = { // module.exports — это синтаксис экспорта в Node.js
     entry: { main: './src/index.js' }, // указали первое место куда заглянет webpack — файл index.js в папке src
@@ -55,7 +56,15 @@ module.exports = { // module.exports — это синтаксис экспор�
         }),
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({
-            'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        })
+            'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        }),
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.css$/g,
+            cssProcessor: require('cssnano'),
+            cssProcessorPluginOptions: {
+                preset: ['default'],
+            },
+            canPrint: true
+        })    
     ]    
 }

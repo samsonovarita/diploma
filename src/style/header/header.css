@@ -1,0 +1,13 @@
+@import url(./__logo/__logo.css);
+@import url(./__navigation-item/__navigation-item.css);
+@import url(./__navigation/__navigation.css);
+@import url(./__navigation-item/_active/_active.css);
+@import url(./__bg/__bg.css);
+
+.header {
+    display: flex;
+    width: 100%;
+    min-height: 80px;
+    justify-content: space-between;
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}

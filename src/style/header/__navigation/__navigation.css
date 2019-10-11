@@ -1,0 +1,7 @@
+.header__navigation {
+    display: flex;
+    justify-content: space-between;
+    min-width: 188px;
+    margin-top: 30px;
+    margin-right: 102px;
+}

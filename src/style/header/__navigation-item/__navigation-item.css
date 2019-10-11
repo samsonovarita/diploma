@@ -1,0 +1,10 @@
+.header__navigation-item {
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    text-align: center;
+    color: #B6BCBF;
+}
