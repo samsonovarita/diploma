@@ -13,10 +13,10 @@
     <div class="page">
         <div class="content">
             <section class="search section">
-                <header class="header section">
-                    <div class="header__logo"></div>
+                <header class="header section header_color">
+                    <img class="header__logo" alt="logo" src="<%=require('./images/NewsAnalyzer.svg')%>">
                     <div class="header__navigation">
-                        <div class="header__navigation-item header__navigation-item_active">Главная</div>
+                        <a href="#" class="header__navigation-item header__navigation-item_active">Главная</a>
                         <a href="about.html" class="header__navigation-item">О&nbsp;проекте</a> 
                     </div>
                 </header>
@@ -39,10 +39,10 @@
             <section class="results section">
                 <div class="results__header">
                     <h2 class="results__title">Результаты поиска</h2>
-                    <div class="results__link">
+                    <a href="analysis.html" class="results__link">
                         <h3 class="results__analysis">Посмотреть аналитику</h3>
                         <img class="results__arrow" alt="arrow" src="<%=require('./images/arrow/icons/black/Path 5.png')%>">
-                    </div>
+                    </a>
                 </div>
                 <div class="results__list">
                     <div class="result-card">

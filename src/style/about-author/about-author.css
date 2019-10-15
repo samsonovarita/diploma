@@ -19,6 +19,9 @@
     }
 }
 
-@media (max-width: 320px) {
-
+@media (max-width: 475px) {
+    .about-author {
+        flex-direction: column;
+        margin-top: 22px;
+    }
 }    

@@ -8,3 +8,15 @@
     color: #1A1B22;
     letter-spacing: 0.3px;
 }
+
+@media (max-width: 768px) {
+    .footer__link-item {
+        
+    }
+}
+
+@media (max-width: 475px) {
+    .footer__link-item {
+        line-height: 42px;
+    }
+}    

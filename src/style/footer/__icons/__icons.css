@@ -5,3 +5,15 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+    .footer__icons {
+        
+    }
+}
+
+@media (max-width: 475px) {
+    .footer__icons {
+        margin-top: 12px;
+    }
+}    

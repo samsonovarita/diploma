@@ -12,5 +12,7 @@
 }
 
 @media (max-width: 320px) {
-
+    .about-author__infobox {
+        margin-top: 25px;
+    }
 }    

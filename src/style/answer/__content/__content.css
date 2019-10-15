@@ -1,21 +1,23 @@
-.about-author__info {
+@import url(./_black/_black.css);
+
+.answer__content {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
-    color: #1A1B22;
-    margin-top: 24px;
+    color: #B6BCBF;
 }
 
 @media (max-width: 768px) {
-    .about-author__info {
-        margin-top: 5px;
-    }
+    
 }
 
 @media (max-width: 475px) {
-    .about-author__info {
-        margin-top: 10px;
+    .answer__content {
+        display: none;
     }
 }    
+
+
+

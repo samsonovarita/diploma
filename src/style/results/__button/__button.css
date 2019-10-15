@@ -27,6 +27,8 @@
     }
 }
 
-@media (max-width: 320px) {
-
+@media (max-width: 475px) {
+    .results__button {
+        width: 288px;
+    }
 }    

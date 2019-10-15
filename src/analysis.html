@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Сервис для анализа происходящих в мире событий. Его задача — установить, насколько популярны в мире новости на определённую тему."/>
+    <meta name="author" content="Маргарита Самсонова"/>
+    <title>Аналитика</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+<body>
+    <div class="page">
+        <div class="content">
+            <header class="header section header_white">
+                <img class="header__logo" alt="logo" src="<%=require('./images/NewsAnalyzer_black.svg')%>">
+                <div class="header__navigation">
+                    <a href="index.html" class="header__navigation-item">Главная</a>                        
+                    <a href="about.html" class="header__navigation-item">О проекте</a> 
+                </div>
+            </header>   
+            <section class="answer section">
+                <p class="answer__content"><span class="answer__content_black">Главная</span> / Аналитика</p>
+                <h2 class="answer__title">Вы спросили: «Путешествия»</h2>
+                <p class="answer__news">Новостей за неделю:<span class="answer__news_bold"> 34 324</span></p>
+                <p class="answer__news">Упоминаний в загаловках:<span class="answer__news_bold"> 235</span></p>
+            </section>
+            <section class="diagram section">
+                <h3 class="diagram__title">Аналитика по дням</h3>
+            </section>
+            <footer class="footer section">
+                <p class="footer__copyright">&copy; 2019 Supersite</p>
+                <nav class="footer__nav">
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link-item">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link-item">О&nbsp;проекте</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link-item">Яндекс.Практикум</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__icons">
+                    <img class="footer__icon-item" alt="" src="<%=require('./images/icon/Github.png')%>">
+                    <img class="footer__icon-item" alt="" src="<%=require('./images/icon/Facebook.png')%>">
+                </div>
+            </footer>
+        </div>   
+    </div>  
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

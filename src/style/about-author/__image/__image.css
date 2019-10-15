@@ -17,6 +17,9 @@
     }
 }
 
-@media (max-width: 320px) {
-
+@media (max-width: 475px) {
+    .about-author__image {
+        max-height: 85vw;
+        margin: 0 auto;
+    }
 }    

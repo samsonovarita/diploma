@@ -1,21 +1,24 @@
-.about-author__info {
+.customers__text {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
     color: #1A1B22;
+    width: 60%;
     margin-top: 24px;
 }
 
 @media (max-width: 768px) {
-    .about-author__info {
-        margin-top: 5px;
+    .customers__text {
+        width: 97%;
+        margin-top: 19px;
+        line-height: 25px;
     }
 }
 
 @media (max-width: 475px) {
-    .about-author__info {
-        margin-top: 10px;
+    .customers__text {
+        font-size: 17px;
     }
 }    

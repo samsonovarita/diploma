@@ -1,0 +1,28 @@
+.tech__box {
+    display: flex;
+    width: 598px;
+    justify-content: space-between;
+    margin-left: 176px;
+}
+
+
+@media (max-width: 1200px) {
+    .tech__box {
+        margin-left: 40px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+   .tech__box {
+    width: 90%;
+    margin: 29px 47px 0 47px;
+   }
+}
+
+@media (max-width: 550px) {
+    .tech__box {
+        flex-wrap: wrap;
+        margin: 29px 24px 0 24px;
+    }
+}    

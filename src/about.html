@@ -12,13 +12,62 @@
 <body>
     <div class="page">
         <div class="content">
-            <header class="header section">
-                <div class="header__logo"></div>
+            <header class="header section header_white">
+                <img class="header__logo" alt="logo" src="<%=require('./images/NewsAnalyzer_black.svg')%>">
                 <div class="header__navigation">
-                    <div class="header__navigation-item header__navigation-item_active">Главная</div>                        
-                    <div class="header__navigation-item">О проекте</div> 
+                    <a href="index.html" class="header__navigation-item">Главная</a>                        
+                    <a href="#"class="header__navigation-item header__navigation-item_active-about">О проекте</a> 
                 </div>
             </header>   
+            <section class="customers section">
+                <h2 class="customers__title">Клиентам</h2>
+                <p class="customers__text">Этот сайт — дипломный проект студента Яндкс.Практикума. Его цель — показать, чему научился студент, и какими технологиями владеет.</p>
+
+                <p class="customers__text">Вёртска сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциальность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+                        
+                <p class="customers__text">Карточки с новостям приходят с сервера и обрабатываются асихронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
+                        
+                <p class="customers__text">При создании проекта была использона сборка технологией Webpack. Это современных подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также настроена сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем у них не будет проблем с отображением. А значит потенциальная аудитория возрастает.</p>
+                        
+                <p class="customers__text">Проект был проверен экспертами Яндекс.Практикума. И если вашему бизесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+            </section>
+            <section class="tech section">
+                <h2 class="tech__title">Используемые технологии</h2>
+                <div class="tech__box">
+                    <img class="tech__img" alt="HTML_logo" src="<%=require('./images/tech/HTML.png')%>">
+                    <img class="tech__img" alt="HTML_logo" src="<%=require('./images/tech/CSS.png')%>">
+                    <img class="tech__img" alt="HTML_logo" src="<%=require('./images/tech/JS.png')%>">
+                    <img class="tech__img" alt="HTML_logo" src="<%=require('./images/tech/Webpack.png')%>">
+                </div>
+            </section>
+            <section class="about-author section">
+                <img class="about-author__image" alt="avatar" src="<%=require('./images/avatar/image-03.png')%>">
+                <div class="about-author__infobox">
+                    <h2 class="about-author__title">Об авторе</h2>
+                    <p class="about-author__info">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
+                    <p class="about-author__info">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                </div>
+            </section>
+            <footer class="footer section">
+                <p class="footer__copyright">&copy; 2019 Supersite</p>
+                <nav class="footer__nav">
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link-item">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link-item">О&nbsp;проекте</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link-item">Яндекс.Практикум</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__icons">
+                    <img class="footer__icon-item" alt="" src="<%=require('./images/icon/Github.png')%>">
+                    <img class="footer__icon-item" alt="" src="<%=require('./images/icon/Facebook.png')%>">
+                </div>
+            </footer>
         </div>   
     </div>  
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
