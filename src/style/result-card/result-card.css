@@ -3,3 +3,25 @@
 @import url(./__title/__title.css);
 @import url(./__text/__text.css);
 @import url(./__source/__source.css);
+@import url(./__info/__info.css);
+@import url(./__box/__box.css);
+
+.result-card {
+    border-radius: 16px;
+    max-height: 576px;
+    /* max-width: 400px; */
+    width: 100%;
+    background: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .result-card {
+        max-height: 420px;
+    }
+}
+
+@media (max-width: 475px) {
+    .result-card {
+        max-height: 444px;
+    }
+}    

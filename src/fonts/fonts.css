@@ -15,3 +15,9 @@
     src: url(./robotoslab-regular-webfont.woff);
     font-weight: normal;
 }
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(./SourceSansPro-Regular.woff);
+    font-weight: normal;
+}

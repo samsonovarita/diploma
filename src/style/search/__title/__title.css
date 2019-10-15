@@ -9,3 +9,23 @@
     width: 608px;
     margin-bottom: 0;
 }
+
+@media (max-width: 768px) {
+    .search__title {
+        font-size: 36px;
+        line-height: 40px;
+        max-width: 385px;
+        margin-top: 41px;
+        margin-right: 57px;
+    }
+}
+
+@media (max-width: 475px) {
+    .search__title {
+        font-size: 36px;
+        line-height: 40px;
+        max-width: 285px;
+        margin-right: 0px;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,22 @@
+.about-author__image {
+    margin-right: 56px;
+    /* max-width: 78vh; */
+    max-height: 45vw;
+}
+
+@media (max-width: 900px) {
+    .about-author__image {
+        max-height: 40vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-author__image {
+        max-height: 31vw;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+
+}    

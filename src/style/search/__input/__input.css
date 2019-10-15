@@ -1,5 +1,5 @@
 .search__input {
-    max-width: 376px;
+    width: 100%;
     max-height: 22px;
     font-family: Roboto;
     font-style: normal;
@@ -10,3 +10,20 @@
     border: none;
     color: #1A1B22;
 }
+
+@media (max-width: 768px) {
+    .search__input {
+        margin-left: 28px;
+    }
+}
+
+@media (max-width: 475px) {
+    .search__input {
+        margin-left: 0;
+        margin-top: 15px;
+        font-size: 16px;
+        line-height: 22px;
+        width: 90%;
+    }
+}
+

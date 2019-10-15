@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Сервис для анализа происходящих в мире событий. Его задача — установить, насколько популярны в мире новости на определённую тему."/>
+    <meta name="author" content="Маргарита Самсонова"/>
+    <title>О проекте</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+<body>
+    <div class="page">
+        <div class="content">
+            <header class="header section">
+                <div class="header__logo"></div>
+                <div class="header__navigation">
+                    <div class="header__navigation-item header__navigation-item_active">Главная</div>                        
+                    <div class="header__navigation-item">О проекте</div> 
+                </div>
+            </header>   
+        </div>   
+    </div>  
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

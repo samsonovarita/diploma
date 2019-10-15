@@ -1,0 +1,18 @@
+.result-card__box {
+    max-height: 186px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .result-card__box {
+        margin-top: 6px;
+    }
+}
+
+@media (max-width: 475px) {
+    .result-card__box {
+        margin-top: 26px;
+    }
+}    

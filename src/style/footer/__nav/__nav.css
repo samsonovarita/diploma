@@ -1,0 +1,15 @@
+.footer__nav {
+    width: 32%;
+}    
+
+
+@media (max-width: 768px) {
+    .footer__nav {
+        margin-right: 56px;
+        width: 52%;
+    }
+}
+
+@media (max-width: 320px) {
+
+}    

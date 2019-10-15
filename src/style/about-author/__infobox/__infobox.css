@@ -1,0 +1,16 @@
+.about-author__infobox {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin-top: 52px;
+}
+
+@media (max-width: 768px) {
+    .about-author__infobox {
+        margin-top: 6px;
+    }
+}
+
+@media (max-width: 320px) {
+
+}    

@@ -1,0 +1,19 @@
+.about-author__info {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+    margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+    .about-author__info {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 320px) {
+
+}    

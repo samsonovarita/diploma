@@ -1,0 +1,31 @@
+.result-card__text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1A1B22;
+    margin-top: 13px;
+
+    white-space: wrap; /* Отменяем перенос текста */
+    overflow: hidden; /* Обрезаем содержимое */
+    padding: 0px; /* Поля */
+    text-overflow: ellipsis; /* Многоточие */
+}
+
+.result-card__text:hover {
+    background: #f0f0f0; /* Цвет фона */
+    white-space: normal; /* Обычный перенос текста */
+}
+
+@media (max-width: 768px) {
+    .result-card__text {
+        margin-top: 9px;
+    }
+}
+
+@media (max-width: 475px) {
+    .result-card__text {
+        max-height: 90px;
+    }
+}    

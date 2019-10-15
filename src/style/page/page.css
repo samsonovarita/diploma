@@ -1,3 +1,45 @@
-.page {
+h1 {
+    margin: 0;
+}
 
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+}
+
+h5 {
+    margin: 0;
+}
+
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    text-decoration: none;
+    margin-block-start: none;
+    margin-block-end: none;
+    margin-inline-start: none;
+    margin-inline-end: none;
+    padding-inline-start: none;
+}
+
+li {
+    list-style-type: none;
 }

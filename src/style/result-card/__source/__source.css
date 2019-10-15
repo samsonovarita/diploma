@@ -1,0 +1,22 @@
+.result-card__source {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+    margin-top: 18px;
+    display: relative;
+}
+
+@media (max-width: 768px) {
+    .result-card__source {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 320px) {
+
+}    

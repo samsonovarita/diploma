@@ -6,3 +6,7 @@
 @import url(./style/search/search.css);
 @import url(./style/results/results.css);
 @import url(./style/result-card/result-card.css);
+@import url(./style/about-author/about-author.css);
+@import url(./style/footer/footer.css);
+@import url(./style/preloader/preloader.css);
+@import url(./style/error/error.css);

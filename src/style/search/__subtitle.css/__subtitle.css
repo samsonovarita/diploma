@@ -6,7 +6,26 @@
     line-height: 24px;
     color: white;
     margin-top: 32px;
-    width: 545px;
+    max-width: 545px;
     margin-right: 63px;
     margin-bottom: 0;
 }
+
+@media (max-width: 768px) {
+    .search__subtitle {
+        margin-top: 15px;
+        max-width: 452px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 475px) {
+    .search__subtitle {
+        font-size: 20px;
+        line-height: 26px;
+        max-width: 288px;
+        margin-top: 56px;
+    }
+}
+

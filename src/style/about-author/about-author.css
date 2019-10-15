@@ -1,0 +1,24 @@
+@import url(./__image/__image.css);
+@import url(./__title/__title.css);
+@import url(./__infobox/__infobox.css);
+@import url(./__info/__info.css);
+
+.about-author {
+    display: flex;
+    /* justify-content: space-between; */
+    /* padding-left: 104px;
+    padding-right: 216px; */
+    margin-top: 80px;
+    width: 85.5%;
+}
+
+@media (max-width: 768px) {
+    .about-author {
+        margin-top: 38px;
+        width: 90.5%;
+    }
+}
+
+@media (max-width: 320px) {
+
+}    
