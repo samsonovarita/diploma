@@ -27,6 +27,10 @@
             </section>
             <section class="diagram section">
                 <h3 class="diagram__title">Аналитика по дням</h3>
+                <div class="diagram__canvas">
+                    <canvas id="myCanvas"></canvas>
+                    <script type="text/javascript" src="analysis.js"></script>
+                </div>
             </section>
             <footer class="footer section">
                 <p class="footer__copyright">&copy; 2019 Supersite</p>
@@ -50,6 +54,6 @@
             </footer>
         </div>   
     </div>  
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.analysis.entry %>"></script>
 </body>
 </html>

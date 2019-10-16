@@ -9,7 +9,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 module.exports = { // module.exports — это синтаксис экспорта в Node.js
     // указали первое место куда заглянет webpack — файл index.js в папке src
     entry: { main: './src/index.js',
-             about:'./src/'
+             about:'./src/about.js',
+             analysis: './src/analysis.js'
     }, 
     output: { // указали в какой файл будет собирться весь js и дали ему имя
         path: path.resolve(__dirname, 'dist'), // переписали точку выхода, используя утилиту path
