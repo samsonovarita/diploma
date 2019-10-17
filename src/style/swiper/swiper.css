@@ -1,0 +1,27 @@
+@import url(./__commit/__commit.css);
+@import url(./__contact/__contact.css);
+@import url(./__date/__date.css);
+@import url(./__email/__email.css);
+@import url(./__img/__img.css);
+@import url(./__infobox/__infobox.css);
+@import url(./__name/__name.css);
+@import url(./__slide/__slide.css);
+@import url(./__button-next/__button-next.css);
+@import url(./__button-prev/__button-prev.css);
+@import url(./__container/__container.css);
+@import url(./__pagination/__pagination.css);
+@import url(./__title/__title.css);
+@import url(./__wrapper/__wrapper.css);
+@import url(./-slide/-slide.css);
+@import url(./__link-name/__link-name.css);
+@import url(./__link/__link.css);
+@import url(./__arrow/__arrow.css);
+@import url(./__layout/__layout.css);
+@import url(./__header/__header.css);
+
+.swiper {
+    width: 100%;
+    background: #F5F6F7;
+    margin: 0 auto;
+    padding-bottom: 108px;
+}

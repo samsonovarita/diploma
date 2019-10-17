@@ -26,10 +26,44 @@
                 <p class="answer__news">Упоминаний в загаловках:<span class="answer__news_bold"> 235</span></p>
             </section>
             <section class="diagram section">
-                <h3 class="diagram__title">Аналитика по дням</h3>
-                <div class="diagram__canvas">
-                    <canvas id="myCanvas"></canvas>
-                    <script type="text/javascript" src="analysis.js"></script>
+                <div class="diagram__layout">
+                    <h3 class="diagram__title">Аналитика по дням</h3>
+                    <div class="diagram__grid">
+                        <p class="diagram__text">Дата<br>(август)</p>
+                        <p class="diagram__text">Кол-во упоминаний</p>
+                    </div>
+                    <div class="diagram__container">
+                        <div class="diagram__scale">
+                            <div class="diagram__part">0</div>
+                            <div class="diagram__part">25</div>
+                            <div class="diagram__part">50</div>
+                            <div class="diagram__part">75</div>
+                            <div class="diagram__part">100</div>
+                        </div>
+                        <div class="diagram__grid">
+                            <p class="diagram__date">19, пн</p>
+                            <div class="diagram__bar">15</div>
+                            <p class="diagram__date">20, вт</p>
+                            <div class="diagram__bar">18</div>
+                            <p class="diagram__date">21, ср</p>
+                            <div class="diagram__bar">11</div>
+                            <p class="diagram__date">22, чт</p>
+                            <div class="diagram__bar">39</div>
+                            <p class="diagram__date">23, пт</p>
+                            <div class="diagram__bar">45</div>
+                            <p class="diagram__date">24, сб</p>
+                            <div class="diagram__bar">73</div>
+                            <p class="diagram__date">25, вс</p>
+                            <div class="diagram__bar">34</div>
+                        </div>
+                        <div class="diagram__scale">
+                            <div class="diagram__part">0</div>
+                            <div class="diagram__part">25</div>
+                            <div class="diagram__part">50</div>
+                            <div class="diagram__part">75</div>
+                            <div class="diagram__part">100</div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <footer class="footer section">
@@ -54,6 +88,6 @@
             </footer>
         </div>   
     </div>  
-    <script src="<%= htmlWebpackPlugin.files.chunks.analysis.entry %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>

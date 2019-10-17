@@ -10,6 +10,7 @@
     padding-right: 216px; */
     margin-top: 80px;
     width: 85.5%;
+    padding-bottom: 78px;
 }
 
 @media (max-width: 768px) {
@@ -23,5 +24,6 @@
     .about-author {
         flex-direction: column;
         margin-top: 22px;
+        padding-bottom: 66px;
     }
 }    

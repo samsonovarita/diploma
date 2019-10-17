@@ -1,11 +1,11 @@
-.results__analysis {
+.swiper__link-name {
     font-family: Roboto;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     line-height: 24px;
     display: flex;
     align-items: center;
-    text-align: center;
-    margin-top: 3px;
+    text-align: right;
+    color: #1A1B22;
 }

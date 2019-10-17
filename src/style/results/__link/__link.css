@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     width: 223px;
+    color: #1A1B22;
 }
 
 @media (max-width: 768px) {

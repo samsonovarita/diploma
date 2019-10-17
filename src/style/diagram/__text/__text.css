@@ -1,0 +1,13 @@
+.diagram__text {
+    margin: 0;
+    margin-bottom: 13px;
+    height: 32px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+}

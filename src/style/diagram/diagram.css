@@ -1,7 +1,31 @@
 @import url(./__title/__title.css);
+@import url(./__grid/__grid.css);
+@import url(./__text/__text.css);
+@import url(./__container/__container.css);
+@import url(./__scale/__scale.css);
+@import url(./__part/__part.css);
+@import url(./__date/__date.css);
+@import url(./__bar/__bar.css);
+@import url(./__layout/__layout.css);
 
 .diagram {
-    width: 100%;
     background-color: #F5F6F7;
-    padding-top: 100px;
+    width: 100%;
+    /* margin: 0 auto; */
+    padding: 80px 0 115px;
 }
+
+@media (max-width: 768px) {
+    .diagram {
+        padding: 40px 0 75px;
+    }
+}
+
+@media (max-width: 475px) {
+    .diagram {
+        padding: 25px 0 91px;
+    }
+}    
+
+
+
