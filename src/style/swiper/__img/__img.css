@@ -1,5 +1,5 @@
 .swiper__img {
-    background-image: url('/src/images/avatar/image-04.png');
+    background-image: url('../../../images/avatar/avatar.png');
     border-radius: 1000px;
     width: 64px;
     height: 64px;
