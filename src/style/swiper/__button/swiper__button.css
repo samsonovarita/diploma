@@ -1,0 +1,22 @@
+@import url(./_active/swiper__button_active.css);
+
+.swiper__button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #D1D2D6;
+}
+
+.swiper__button:focus {
+    outline: none;
+    background: #1A1B22;
+}
+
+.swiper__button:active {
+    outline: none;
+    background: #1A1B22;
+}
+
+.swiper__button:hover {
+    background: #696969;
+}

@@ -1,17 +1,13 @@
-@import url(./__logo/__logo.css);
-@import url(./__navigation-item/__navigation-item.css);
-@import url(./__navigation/__navigation.css);
-@import url(./__navigation-item/_active/_active.css);
-@import url(./__bg/__bg.css);
-@import url(./__navigation-item/_active-about/_active-about.css);
-@import url(./_white/_white.css);
-@import url(./_color/_color.css);
+@import url(./__logo/header__logo.css);
+@import url(./__navigation-item/header__navigation-item.css);
+@import url(./__navigation/header__navigation.css);
 
 .header {
     display: flex;
     width: 100%;
     height: 80px;
     justify-content: space-between;
+    box-shadow: inset 0px -1px 0px #D1D2D6;
 }
 
 @media (max-width: 768px) {

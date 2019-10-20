@@ -14,7 +14,8 @@ module.exports = { // module.exports — это синтаксис экспор�
     }, 
     output: { // указали в какой файл будет собирться весь js и дали ему имя
         path: path.resolve(__dirname, 'dist'), // переписали точку выхода, используя утилиту path
-        filename: '[name].[chunkhash].js'
+        filename: '[name].[chunkhash].js',
+        publicPath: isDev ? '/' : '/diploma/',
     },
     module: {
         rules: [{ // тут описываются правила
@@ -27,20 +28,17 @@ module.exports = { // module.exports — это синтаксис экспор�
                 use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader'] // к этим файлам нужно применить пакеты, которые мы уже установили
             },
             {
-                test: /\.(woff|woff2|ttf|otf|png|jpe?g|gif|svg)$/i,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]'
-                    }
-                },
-                {
-                    loader: 'image-webpack-loader',
-                    options: {
-                        bypassOnDebug: true,
-                        disable: true,
-                    }
-                }]
+                test: /\.(png|jpg|gif|ico|svg)$/,
+                use: [
+                     'file-loader?name=images/[name].[ext]', // указали папку, куда складывать изображения
+                     {
+                         loader: 'image-webpack-loader'
+                     },
+                    ],
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2)$/,
+                loader: `file-loader?name=fonts/[name].[ext]`
             }
         ]
     },
@@ -49,7 +47,7 @@ module.exports = { // module.exports — это синтаксис экспор�
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: 'css/[name].[contenthash].css'
         }),
         new HtmlWebpackPlugin({
             // Означает, что:

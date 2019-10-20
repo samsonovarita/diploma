@@ -1,0 +1,20 @@
+.diagram__container {
+    width: 100%;
+    margin: 0;
+    border-top: 1px solid #1A1B22;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.diagram__container:nth-child(2){
+    border-top: none;
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 475px) {
+    
+}    

@@ -1,6 +1,6 @@
-@import url(./__content/__content.css);
-@import url(./__title/__title.css);
-@import url(./__news/__news.css);
+@import url(./__content/answer__content.css);
+@import url(./__title/answer__title.css);
+@import url(./__news/answer__news.css);
 
 .answer {
     width: 86%;

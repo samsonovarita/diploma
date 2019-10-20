@@ -1,0 +1,11 @@
+.swiper__contact {
+    margin-left: 16px;
+    margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+    .swiper__contact {
+        margin-top: 0;
+        margin-left: 11px;
+    }
+}

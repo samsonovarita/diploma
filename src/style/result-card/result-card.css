@@ -8,7 +8,7 @@
 
 .result-card {
     border-radius: 16px;
-    max-height: 576px;
+    /* max-height: 576px; */
     /* max-width: 400px; */
     width: 100%;
     background: #FFFFFF;
@@ -16,12 +16,13 @@
 
 @media (max-width: 768px) {
     .result-card {
-        max-height: 420px;
+        /* max-height: 420px; */
+        /* height: 182px; */
     }
 }
 
 @media (max-width: 475px) {
     .result-card {
-        max-height: 444px;
+        /* max-height: 444px; */
     }
 }    

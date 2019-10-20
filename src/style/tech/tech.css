@@ -1,7 +1,8 @@
 @import url(./__title/__title.css);
 @import url(./__img/__img.css);
 @import url(./__box/__box.css);
-
+@import url(./__item/tech__item.css);
+@import url(./__name/tech__name.css);
 .tech {
     display: flex;
     flex-direction: row;

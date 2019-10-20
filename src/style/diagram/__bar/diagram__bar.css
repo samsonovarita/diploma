@@ -1,0 +1,57 @@
+.diagram__bar {
+    margin: 0;
+    margin-top: 56px;
+    min-width: 20px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-indent: 6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color:#2F71E5;
+}
+
+.diagram__bar:nth-child(2){
+    width: 16.31%;
+    margin-top: 44px;
+}
+
+.diagram__bar:nth-child(4){
+    width: 22.70%;
+}
+
+.diagram__bar:nth-child(6){
+    width: 10.64%;
+}
+
+.diagram__bar:nth-child(8){
+    width: 37.59%;
+}
+
+.diagram__bar:nth-child(10){
+    width: 46.81%;
+}
+
+.diagram__bar:nth-child(12){
+    width: 72.34%;
+}
+
+.diagram__bar:nth-child(14){
+    width: 32.62%;
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 475px) {
+    .diagram__bar:nth-child(2), .diagram__bar:nth-child(4), .diagram__bar:nth-child(6), .diagram__bar:nth-child(8), .diagram__bar:nth-child(10), .diagram__bar:nth-child(12), .diagram__bar:nth-child(14) {
+        margin-top: 15px;
+    }
+}    

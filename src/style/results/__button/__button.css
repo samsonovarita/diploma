@@ -30,5 +30,6 @@
 @media (max-width: 475px) {
     .results__button {
         width: 288px;
+        margin-top: 13px;
     }
 }    

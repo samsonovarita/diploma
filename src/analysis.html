@@ -7,13 +7,13 @@
     <meta name="description" content="Сервис для анализа происходящих в мире событий. Его задача — установить, насколько популярны в мире новости на определённую тему."/>
     <meta name="author" content="Маргарита Самсонова"/>
     <title>Аналитика</title>
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analysis.css %>">
 </head>
 <body>
     <div class="page">
         <div class="content">
-            <header class="header section header_white">
-                <img class="header__logo" alt="logo" src="<%=require('./images/NewsAnalyzer_black.svg')%>">
+            <header class="header section">
+                <a href="index.html" class="header__logo">NewsAnalyzer</a>
                 <div class="header__navigation">
                     <a href="index.html" class="header__navigation-item">Главная</a>                        
                     <a href="about.html" class="header__navigation-item">О проекте</a> 
@@ -67,27 +67,27 @@
                 </div>
             </section>
             <footer class="footer section">
-                <p class="footer__copyright">&copy; 2019 Supersite</p>
+                <p class="footer__copyright">&copy;&nbsp;2019&nbsp;Supersite</p>
                 <nav class="footer__nav">
                     <ul class="footer__links">
                         <li>
-                            <a href="#" class="footer__link-item">Главная</a>
+                            <a href="index.html" class="footer__link-item">Главная</a>
                         </li>
                         <li>
-                            <a href="#" class="footer__link-item">О&nbsp;проекте</a>
+                            <a href="about.html" class="footer__link-item">О&nbsp;проекте</a>
                         </li>
                         <li>
-                            <a href="#" class="footer__link-item">Яндекс.Практикум</a>
+                            <a href="https://praktikum.yandex.ru/" class="footer__link-item" target="_blank">Яндекс.Практикум</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="footer__icons">
-                    <img class="footer__icon-item" alt="" src="<%=require('./images/icon/Github.png')%>">
-                    <img class="footer__icon-item" alt="" src="<%=require('./images/icon/Facebook.png')%>">
+                    <a class="footer__icon-item" href="https://github.com/samsonovarita" target="_blank"><img alt="github icon" src="<%=require('./images/icon/github.png')%>"></a>
+                    <a class="footer__icon-item" href="https://www.facebook.com/margarita.samsonova1" target="_blank"><img alt="facebook icon" src="<%=require('./images/icon/facebook.png')%>"></a>
                 </div>
             </footer>
         </div>   
     </div>  
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.analysis.entry %>"></script>
 </body>
 </html>

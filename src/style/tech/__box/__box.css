@@ -3,6 +3,7 @@
     width: 598px;
     justify-content: space-between;
     margin-left: 176px;
+    margin-top: 10px;
 }
 
 
@@ -13,16 +14,33 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
    .tech__box {
     width: 90%;
-    margin: 29px 47px 0 47px;
+    margin: 38px auto 0px;
    }
 }
 
 @media (max-width: 550px) {
     .tech__box {
         flex-wrap: wrap;
-        margin: 29px 24px 0 24px;
+        margin: 29px auto 24px;
+        width: 65%;
     }
 }    
+
+@media (max-width: 379px) {
+    .tech__box {
+        flex-wrap: wrap;
+        margin: 43px auto 24px;
+        width: 90%
+    }
+}
+
+@media (max-width: 320px) {
+    .tech__box {
+        flex-wrap: wrap;
+        margin: 43px auto 24px;
+        width: 85%
+    }
+}

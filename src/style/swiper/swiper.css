@@ -6,22 +6,38 @@
 @import url(./__infobox/__infobox.css);
 @import url(./__name/__name.css);
 @import url(./__slide/__slide.css);
-@import url(./__button-next/__button-next.css);
-@import url(./__button-prev/__button-prev.css);
-@import url(./__container/__container.css);
-@import url(./__pagination/__pagination.css);
 @import url(./__title/__title.css);
-@import url(./__wrapper/__wrapper.css);
-@import url(./-slide/-slide.css);
 @import url(./__link-name/__link-name.css);
 @import url(./__link/__link.css);
 @import url(./__arrow/__arrow.css);
 @import url(./__layout/__layout.css);
 @import url(./__header/__header.css);
+@import url(./__slide-container/__slide-container.css);
+@import url(./__gradient/__gradient.css);
+@import url(./__control-slide-arrow/swiper__control-slide-arrow.css);
+@import url(./__buttons/swiper__buttons.css);
+@import url(./__button/swiper__button.css);
+@import url(./__github-link/swiper__github-link.css);
 
 .swiper {
     width: 100%;
     background: #F5F6F7;
     margin: 0 auto;
-    padding-bottom: 108px;
+    padding-bottom: 78px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .swiper {
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .swiper {
+        padding-bottom: 32px;
+    }
 }

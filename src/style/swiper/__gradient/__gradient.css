@@ -1,0 +1,25 @@
+@import url(./_left/swiper__gradient_left.css);
+@import url(./_right/swiper__gradient_right.css);
+
+.swiper__gradient {
+    /* width: 5.5%; */
+    /* width: 87.52px;
+    margin: 0; */
+    
+    /* display: flex;
+    justify-content: center;
+    padding-top: 124px;
+    padding-bottom: 100px;
+    border-radius: 20px; */
+    /* background: radial-gradient(at center, rgba(245, 246,247, 0) 0%, #FFFFFF 100%); */
+    position: absolute;
+    width: 88px;
+    height: 288px;
+    top: 0;
+}
+
+@media screen and (max-width: 1410px) {
+    .swiper__gradient {
+        display: none;
+    }
+}

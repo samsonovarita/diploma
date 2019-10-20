@@ -1,0 +1,35 @@
+.footer__icons {
+    margin-top: 5px;
+    width: 71px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 690px) {
+    .footer__icons {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 502px) {
+    .footer__icons {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 475px) {
+    .footer__icons {
+        margin-top: 12px;
+    }
+}    
+
+@media (max-width: 475px) {
+    .footer__icons {
+        margin-left: 20px;
+    }
+}  

@@ -27,7 +27,14 @@
     }
 }
 
-@media (max-width: 664px) {
+@media (max-width: 710px) {
+    .results__list {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
     .results__list {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 23px;

@@ -7,6 +7,12 @@
     color: #1A1B22;
 }
 
+@media (max-width: 950px) {
+    .swiper__title {
+        width: 400px;
+    }
+}
+
 @media (max-width: 768px) {
     .swiper__title {
         font-size: 30px;
@@ -16,6 +22,10 @@
 }
 
 @media (max-width: 320px) {
-    
+    .swiper__title {
+        font-size: 30px;
+        line-height: 40px;
+        width: 200px;
+    }
 }    
 

@@ -1,0 +1,18 @@
+.swiper__buttons {
+    width: 48px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px auto 0;
+}
+
+@media screen and (max-width: 1023px) {
+    .swiper__buttons {
+        
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .swiper__buttons {
+        
+    }
+}

@@ -2,19 +2,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 86%;
+    width: 85%;
     align-content: center;
     margin: 77px auto;
+    margin: 63px auto;
+    margin-top: 75px;
 }
 
 @media (max-width: 768px) {
     .swiper__header {
         width: 90%;
-        margin: 61px auto;
+        margin: 41px auto 31px;
     }
 }
 
 @media (max-width: 320px) {
-    
+    .swiper__header {
+        margin: 33px auto 15px;
+    }
 }    
 

@@ -1,8 +1,9 @@
 .results__link {
+    color: #1A1B22;
     display: flex;
     justify-content: space-between;
-    width: 223px;
-    color: #1A1B22;
+    width: 225px;
+    align-items: center;  
 }
 
 @media (max-width: 768px) {
@@ -13,6 +14,7 @@
     .results__link {
         margin-top: 13px;
         margin-left: 0;
+        width: 219px;
     }
 }    
 

@@ -1,28 +1,4 @@
-h1 {
-    margin: 0;
-}
-
-h2 {
-    margin: 0;
-}
-
-h3 {
-    margin: 0;
-}
-
-h4 {
-    margin: 0;
-}
-
-h5 {
-    margin: 0;
-}
-
-h6 {
-    margin: 0;
-}
-
-p {
+h1, h2, h3, h4 ,h5, h6, p {
     margin: 0;
 }
 
@@ -31,15 +7,26 @@ a {
 }
 
 ul {
-    list-style-type: none;
-    text-decoration: none;
-    margin-block-start: none;
-    margin-block-end: none;
-    margin-inline-start: none;
-    margin-inline-end: none;
-    padding-inline-start: none;
+   margin: 0;
+   padding: 0;
 }
 
 li {
     list-style-type: none;
+}
+
+input {
+    outline:none;
+}
+
+a:active, a:focus, a:visited { 
+    outline: none; 
+}
+
+button:active, button:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
 }
