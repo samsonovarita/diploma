@@ -15,8 +15,10 @@
     border: none;
 }
 
-.results__button:active {
+.results__button:hover {
     opacity: 0.9;
+    background-color: #e5e5e5;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
