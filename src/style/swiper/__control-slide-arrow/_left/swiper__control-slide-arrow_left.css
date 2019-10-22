@@ -1,0 +1,6 @@
+.swiper__control-slide-arrow_left {
+    background-image: url(../../../../images/page-control/slider-control-left.png);
+    background-repeat: no-repeat;
+    background-position: 45% 45%;
+    left: 45px;
+}

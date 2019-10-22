@@ -1,0 +1,28 @@
+.search__control {
+    display: flex;
+    margin-top: 64px;
+    width: 608px;
+    height: 64px;
+    background-color: white;
+    color: #1A1B22;
+    /*border: 1px solid #D1D2D6;*/
+    border-radius: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .search__control {
+        margin-top: 24px;
+        max-width: 453px;
+        max-height: 56px;
+    }
+}
+
+@media (max-width: 475px) {
+    .search__control {
+        flex-direction: column;
+        max-width: 288px;
+        max-height: 56px;
+    }
+}    

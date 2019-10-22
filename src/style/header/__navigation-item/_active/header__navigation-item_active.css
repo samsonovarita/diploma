@@ -1,0 +1,5 @@
+.header__navigation-item.header__navigation-item_active {
+    color: #FFFFFF;
+    border-bottom: 3px solid #FFFFFF;
+    font-weight: 600;
+}

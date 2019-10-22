@@ -1,0 +1,25 @@
+.header__navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 188px;
+    margin-top: 30px;
+    margin-right: 102px;
+}
+
+@media (max-width: 768px) {
+    .header__navigation {
+        margin-top: 22px;
+        margin-right: 43px;
+    }
+}
+
+@media (max-width: 475px) {
+    .header__navigation {
+        width: 147px;
+        margin-top: 16px;
+        margin-right: 14px;
+    }
+}
+
+
+

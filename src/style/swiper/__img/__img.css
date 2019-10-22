@@ -1,0 +1,15 @@
+.swiper__img {
+    background-image: url('../../../images/avatar/avatar.png');
+    border-radius: 1000px;
+    width: 64px;
+    height: 64px;
+    background-size: contain;
+}
+
+@media (max-width: 768px) {
+    .swiper__img {
+        width: 48px;
+        height: 48px;
+        background-size: contain;
+    }
+}

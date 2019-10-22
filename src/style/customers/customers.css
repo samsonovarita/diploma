@@ -1,0 +1,21 @@
+@import url(./__title/customers__title.css);
+@import url(./__text/customers__text.css);
+
+.customers {
+    margin-left: 104px;
+    margin-top: 80px;
+    margin-bottom: 96px;
+}
+
+@media (max-width: 768px) {
+    .customers {
+        margin: 34px 39px 55px;
+    }
+}
+
+@media (max-width: 475px) {
+    .customers {
+        margin: 21px 16px;
+        margin-bottom: 35px;
+    }
+}    

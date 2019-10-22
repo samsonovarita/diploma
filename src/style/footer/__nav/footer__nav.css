@@ -1,0 +1,27 @@
+.footer__nav {
+    width: 405px;
+}    
+
+
+@media (max-width: 768px) {
+    .footer__nav {
+        margin-right: 42px;
+        width: 355px;
+    }
+}
+
+@media (max-width: 639px) {
+    .footer__nav {
+        width: 233px;
+    }
+}
+
+@media (max-width: 413px) {
+    .footer__nav {
+        width: 112px;
+    }
+}  
+
+@media (max-width: 320px) {
+
+}    

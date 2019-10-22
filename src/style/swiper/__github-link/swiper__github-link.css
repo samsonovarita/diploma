@@ -1,0 +1,27 @@
+.swiper__github-link {
+    display: none;
+    background: transparent;
+}
+
+@media (max-width: 550px) {
+    .swiper__github-link {
+        display: block;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        /* display: flex; */
+        align-items: center;
+        text-align: center;
+        color: #1A1B22;
+        border: 1px solid #1A1B22;
+        box-sizing: border-box;
+        border-radius: 80px;
+        width: 288px;
+        height: 56px;
+        background-color: #F5F6F7;
+        vertical-align: middle;
+        margin-top: 23px;
+    }
+}

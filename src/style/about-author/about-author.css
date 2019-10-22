@@ -1,0 +1,27 @@
+@import url(./__image/about-author__image.css);
+@import url(./__title/about-author__title.css);
+@import url(./__infobox/about-author__infobox.css);
+@import url(./__info/about-author__info.css);
+
+.about-author {
+    display: flex;
+    margin-top: 80px;
+    width: 85.5%;
+    padding-bottom: 78px;
+}
+
+@media (max-width: 768px) {
+    .about-author {
+        margin-top: 38px;
+        width: 90.5%;
+        padding-bottom: 37px;
+    }
+}
+
+@media (max-width: 475px) {
+    .about-author {
+        flex-direction: column;
+        margin-top: 22px;
+        padding-bottom: 33px;
+    }
+}    

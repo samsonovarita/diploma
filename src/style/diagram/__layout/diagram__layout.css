@@ -1,0 +1,14 @@
+.diagram__layout {
+    width: 85.42%;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .diagram__layout {
+        width: 89.42%;
+    }
+}
+
+@media (max-width: 475px) {
+    
+}    

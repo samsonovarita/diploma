@@ -1,0 +1,33 @@
+@import url(./_left/swiper__control-slide-arrow_left.css);
+@import url(./_right/swiper__control-slide-arrow_right.css);
+
+.swiper__control-slide-arrow {
+    position: relative;
+    top: 123px;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #1A1B22;
+    background-position: contain;
+}
+
+.swiper__control-slide-arrow:focus {
+    outline: none;
+}
+
+.swiper__control-slide-arrow:active {
+    outline: none;
+    background-color: #696969;
+}
+
+.swiper__control-slide-arrow:hover {
+    background-color: #696969;
+}
+
+@media (max-width: 1416px) {
+    .swiper__control-slide-arrow {
+        display: none;
+    }
+}

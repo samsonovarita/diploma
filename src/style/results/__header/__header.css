@@ -1,0 +1,22 @@
+.results__header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 81px;
+    margin-bottom: 47px;
+    width: 86%;
+}
+
+@media (max-width: 768px) {
+    .results__header {
+        margin-top: 42px;
+        margin-bottom: 15px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .results__header {
+        flex-direction: column;
+        margin-top: 33px;
+    }
+}    
