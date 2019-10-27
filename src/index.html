@@ -22,12 +22,13 @@
                 </header>
                 <h1 class="search__title">Что в мире творится?</h1>
                 <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в носотях за прошедшую неделю.</h2>
-                <form class="search__control">
+                <div class="search__control">
                     <input class="search__input" type="text" placeholder="Природа">
-                    <button class="search__button" type="submit">Искать</button>
-                </form>
+                    <button class="search__button" id="searchButton">Искать</button>
+                </div>
+                <span class="search__error-message"></span>
             </section>
-            <!-- <section class="preloader section">
+            <section class="preloader section">
                 <i class="circle-preloader"></i>
                 <p class="preloader__text">Идет поиск новостей...</p>
             </section>
@@ -35,7 +36,7 @@
                 <img class="error__icon" alt="error" src="<%=require('./images/not-found_v1.png')%>">
                 <h2 class="error__title">Ничего не найдено</h2>
                 <p class="error__text">К сожалению по вашему запросу ничего не найдено.</p>
-            </section> -->
+            </section>
             <section class="results section">
                 <div class="results__header">
                     <h2 class="results__title">Результаты поиска</h2>
@@ -45,7 +46,7 @@
                     </a>
                 </div>
                 <div class="results__list">
-                    <div class="result-card">
+                    <a href="#" class="result-card">
                         <img class="result-card__image" alt="" src="<%=require('./images/card/image_08.png')%>">
                         <div class="result-card__info">
                             <div class="result-card__date">2 августа, 2019</div>
@@ -55,7 +56,7 @@
                             </div>
                             <p class="result-card__source">Лента.ру</p>
                         </div>
-                    </div>
+                    </a>
                     <div class="result-card">
                         <img class="result-card__image" alt="" src="<%=require('./images/card/image_04.png')%>">
                         <div class="result-card__info">

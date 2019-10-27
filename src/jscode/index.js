@@ -1,12 +1,23 @@
 import "./../style.css";
-import {Api} from "./modules/Api.js";
-import "./index.js";
+import { Api } from "./modules/Api.js";
+import { apiNews, today, previousWeek } from "./modules/constants.js";
+// import { NewsCard } from "./modules/NewsCard.js";
+import { ResultList } from "./modules/ResultList.js";
 
-const apiNews = '744ea2ddd9ad4c13982f718c39af935e';
-const searchInput = document.querySelector(".search__input").elements.keyword;
+// const searchButton = document.querySelector(".search__button");
+// const newsCard = new NewsCard();
 
-export const today = new Date(Date.now() + 60 * 60 * 1000).toLocaleString().match(regexOne).join('').replace(regexTwo,(match, date, month, year) => `${year}-${month}-${date}`);
-//Получение даты 7 дней назад
-export const pastWeek = new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).toLocaleString().match(regexOne).join('').replace(regexTwo,(match,date,month,year) => `${year}-${month}-${date}`);
+const search = function () {
+  const searchInput = document.querySelector(".search__input").value;
+  let res = new Api(`https://newsapi.org/v2/everything?q=${searchInput}&apiKey=${apiNews}&pageSize=100&from=${today}&to=${previousWeek}&language=ru`);
+  res.getApiData()
+  // console.log(res);
+    .then(res => {
+    if (res && res.length > 0) {
+      const List = new ResultList(document.querySelector('.results__list'), res);
+      List.render(res);
+    }
+  })  
+}
 
-const getNews = new Api(`https://newsapi.org/v2/everything?q=${searchInput}&apiKey=${apiNews}&pageSize=100&from=${today}&to=${pastWeek}&language=ru`);
+document.querySelector("#searchButton").addEventListener('click', search);
