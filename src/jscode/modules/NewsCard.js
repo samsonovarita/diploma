@@ -9,9 +9,9 @@ export default class NewsCard {
         this.url = url;
         this.urlToImage = urlToImage;
         this.publishedAt = publishedAt;
-        this.title = title;
+        // this.title = title;
         this.description = description;
-        this.source = source.name;
+        // this.source = source.name;
         this.cardElement = this.create();
     }
 
@@ -21,16 +21,16 @@ export default class NewsCard {
         const newsCardInfo = createNode('div', 'result-card__info');
         const newsCardDate = createNode('div', 'result-card__date');
         const newsCardBox = createNode('div', 'result-card__box');
-        const newsCardTitle = createNode('div', 'result-card__title');
+        // const newsCardTitle = createNode('div', 'result-card__title');
         const newsCardText = createNode('p', 'result-card__text');
-        const newsCardSource = createNode('p', 'result-card__source');
+        // const newsCardSource = createNode('p', 'result-card__source');
 
-        newsCard.setAttribute('href', url);
+        newsCard.setAttribute('href', this.url);
         newsCardImage.textContent = `url(${this.urlToImage})`;
         newsCardDate.textContent = this.publishedAt;
-        newsCardTitle = this.title;
+        // newsCardTitle = this.title;
         newsCardText = this.description;
-        newsCardSource = this.source.name;
+        // newsCardSource = this.source.name;
 
 
         newsCard.appendChild(newsCardImage);
@@ -38,9 +38,9 @@ export default class NewsCard {
 
         newsCardInfo.appendChild(newsCardDate);
         newsCardInfo.appendChild(newsCardBox);
-        newsCardInfo.appendChild(newsCardSource);
+        // newsCardInfo.appendChild(newsCardSource);
 
-        newsCardBox.appendChild(newsCardTitle);
+        // newsCardBox.appendChild(newsCardTitle);
         newsCardBox.appendChild(newsCardText);
 
         return newsCard;
