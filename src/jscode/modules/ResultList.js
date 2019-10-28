@@ -13,6 +13,9 @@ export class ResultList {
     }
   
     render() {
-      this.cards.forEach((elem) => {this.addCard(elem.url, elem.urlToImage, elem.publishedAt, elem.title, elem.description, elem.source)})
+      // console.dir(this.cards);
+      this.cards.forEach((elem) => {
+        console.log(elem);
+        this.addCard(elem)})
     }
   }

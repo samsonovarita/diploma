@@ -15,6 +15,7 @@ const search = function () {
     .then(res => {
       console.log(res);
     if (res.articles && res.articles.length > 0) {
+      // console.log(res.articles);
       // let res = {
       //   url: articles.url,
       //   urlToImage: articles.urlToImage,
