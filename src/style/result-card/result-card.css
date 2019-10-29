@@ -10,8 +10,8 @@
 .result-card {
     border-radius: 16px;
     /* max-height: 576px; */
-    max-width: 400px;
-    width: 100%;
+    /* max-width: 400px; */
+    /* width: 100%; */
     background: #FFFFFF;
 }
 

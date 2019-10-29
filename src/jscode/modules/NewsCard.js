@@ -1,3 +1,4 @@
+import {makeFormattedDate} from "./changeDate.js";
 export function createNode(tag, tagClass) {
     const element = document.createElement(tag);
     element.classList.add(tagClass);
@@ -7,13 +8,11 @@ export function createNode(tag, tagClass) {
 export default class NewsCard {
     constructor(url, urlToImage, publishedAt, title, description, source) {
         this.url = url;
-        
         this.urlToImage = urlToImage;
         this.publishedAt = publishedAt;
         this.title = title;
         this.description = description;
-        console.log(source.name);
-        this.source.name = source.name;
+        this.source = source;
         this.cardElement = this.create();
     }
 
@@ -26,15 +25,13 @@ export default class NewsCard {
         const newsCardBox = createNode('div', 'result-card__box');
         const newsCardTitle = createNode('div', 'result-card__title');
         const newsCardText = createNode('p', 'result-card__text');
-        
         const newsCardSource = createNode('p', 'result-card__source');
 
         newsCard.setAttribute('href', this.url);
         newsCardImage.src = this.urlToImage;
-        newsCardDate.textContent = this.publishedAt;
+        newsCardDate.textContent = makeFormattedDate(this.publishedAt);
         newsCardTitle.textContent = this.title;
         newsCardText.textContent  = this.description;
-        
         newsCardSource.textContent = this.source.name;
 
 
