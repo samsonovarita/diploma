@@ -5,11 +5,12 @@
 @import url(./__source/__source.css);
 @import url(./__info/__info.css);
 @import url(./__box/__box.css);
+@import url(./__image-size/result-card__image-size.css);
 
 .result-card {
     border-radius: 16px;
     /* max-height: 576px; */
-    /* max-width: 400px; */
+    max-width: 400px;
     width: 100%;
     background: #FFFFFF;
 }

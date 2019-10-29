@@ -8,14 +8,14 @@ export class ResultList {
     }
   
     addCard(card) { 
-      const { cardElement } = new NewsCard(card.url, card.urlToImage, card.publishedAt, card.title, card.description, card.source);
+      const { cardElement } = new NewsCard(card.url, card.urlToImage, card.publishedAt, card.title, card.description, card.source.name);
       this.box.appendChild(cardElement);
     }
   
     render() {
       // console.dir(this.cards);
       this.cards.forEach((elem) => {
-        console.log(elem);
+        // console.log(elem);
         this.addCard(elem)})
     }
   }

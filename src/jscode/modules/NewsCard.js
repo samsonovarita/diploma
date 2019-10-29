@@ -10,40 +10,43 @@ export default class NewsCard {
         
         this.urlToImage = urlToImage;
         this.publishedAt = publishedAt;
-        // console.log(publishedAt);
-        // this.title = title;
+        this.title = title;
         this.description = description;
-        // this.source = source.name;
+        console.log(source.name);
+        this.source.name = source.name;
         this.cardElement = this.create();
     }
 
     create() {
         const newsCard = createNode('a', 'result-card');
+        const newsCardImageSize = createNode('div', 'result-card__image-size');
         const newsCardImage = createNode('img', 'result-card__image');
         const newsCardInfo = createNode('div', 'result-card__info');
         const newsCardDate = createNode('div', 'result-card__date');
         const newsCardBox = createNode('div', 'result-card__box');
-        // const newsCardTitle = createNode('div', 'result-card__title');
+        const newsCardTitle = createNode('div', 'result-card__title');
         const newsCardText = createNode('p', 'result-card__text');
         
-        // const newsCardSource = createNode('p', 'result-card__source');
+        const newsCardSource = createNode('p', 'result-card__source');
 
         newsCard.setAttribute('href', this.url);
         newsCardImage.src = this.urlToImage;
         newsCardDate.textContent = this.publishedAt;
-        // newsCardTitle = this.title;
+        newsCardTitle.textContent = this.title;
         newsCardText.textContent  = this.description;
-        // newsCardSource = this.source.name;
+        
+        newsCardSource.textContent = this.source.name;
 
 
-        newsCard.appendChild(newsCardImage);
+        newsCard.appendChild(newsCardImageSize);
+        newsCardImageSize.appendChild(newsCardImage);
         newsCard.appendChild(newsCardInfo);
 
         newsCardInfo.appendChild(newsCardDate);
         newsCardInfo.appendChild(newsCardBox);
-        // newsCardInfo.appendChild(newsCardSource);
+        newsCardInfo.appendChild(newsCardSource);
 
-        // newsCardBox.appendChild(newsCardTitle);
+        newsCardBox.appendChild(newsCardTitle);
         newsCardBox.appendChild(newsCardText);
 
         return newsCard;
