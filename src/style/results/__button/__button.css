@@ -1,3 +1,5 @@
+@import url(./_hiden/results__button_hidden.css);
+
 .results__button {
     font-family: 'Roboto';
     font-style: normal;

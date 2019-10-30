@@ -4,8 +4,8 @@ export class ResultList {
   constructor(box, cards) {
     this.box = box;
     this.cards = cards;
-    this.render();
-    this.cardLine = cards;
+    this.render(cards);
+    this.moreCards();
   }
 
   addCard(card) {
@@ -13,39 +13,41 @@ export class ResultList {
     this.box.appendChild(cardElement);
   }
 
-  render() {
+  render(cards) {
     // console.dir(this.cards);
-    this.cards.forEach((elem) => {
+    // this.cards.forEach((elem) => {
+      cards.slice(0,3).forEach((elem) => {
       // console.log(elem);
       this.addCard(elem)
     })
   }
 
-  // array(arr, dif) {
-  //   const array = arr.filter((item) => {
-  //     return !dif.includes(item)
-  //   });
-  //   const bar = array.slice(0, 3);
-  //   return bar
-  // }
+  cards(array, num) {
+    const arr = array.filter((item) => {
+      return !num.includes(item)
+    });
+    const line = arr.slice(0, 3);
+    console.log(line);
+    return line
+  }
 
-  // moreCards() {
-  //   const button = document.querySelector('.results__button');
-  //   const added = this.cardLine.slice(0, 3);
-  //   const array = this.cardLine;
-  //   button.addEventListener('click', () => {
-  //     if (added.length !== array.length) {
-  //       const bar = this.array(array, added)
-  //       this.render(bar);
-  //       bar.forEach(element => {
-  //         return added.push(element)
-  //       });
-  //       // console.log(added);
-  //       this.array(array, added);
-  //       if (added.length === array.length) {
-  //         button.classList.add('results__button_hide')
-  //       }
-  //     }
-  //   });
-  // }
+  moreCards() {
+    const button = document.querySelector('.results__button');
+    const added = this.cards.slice(0, 3);
+    const cards = this.cards;
+    button.addEventListener('click', () => {
+      if (added.length !== cards.length) {
+        const line = this.cards(cards, added)
+        this.render(line);
+        line.forEach(element => {
+          return added.push(element)
+        });
+        // console.log(added);
+        this.cards(cards, added);
+        if (added.length === cards.length) {
+          button.classList.add('results__button_hidden')
+        }
+      }
+    });
+  }
 }

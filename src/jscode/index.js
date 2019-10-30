@@ -7,14 +7,17 @@ const search = function () {
   const searchInput = document.querySelector(".search__input").value;
   let res = new Api(`https://newsapi.org/v2/everything?q=${searchInput}&apiKey=${apiNews}&pageSize=100&from=${today}&to=${previousWeek}&language=ru`);
   res.getApiData()
-  
+
     .then(res => {
-      console.log(res);
-    if (res.articles && res.articles.length > 0) {
-      const List = new ResultList(document.querySelector('.results__list'), res.articles);
-      List.render(res.articles);
-    }
-  })  
+      // console.log(res);
+      if (res.articles && res.articles.length > 0) {
+        // document.querySelector('.results').remove('.results_hidden');
+        const List = new ResultList(document.querySelector('.results__list'), res.articles);
+        List.render(res.articles);
+      } else {
+
+      }
+    })
 }
 
 document.querySelector("#searchButton").addEventListener('click', search);

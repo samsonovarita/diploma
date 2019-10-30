@@ -5,6 +5,7 @@
 @import url(./__button/__button.css);
 @import url(./__arrow/__arrow.css);
 @import url(./__link/__link.css);
+@import url(./_hidden/results_hidden.css);
 
 .results {
     background: #F5F6F7;

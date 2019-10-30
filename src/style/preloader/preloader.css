@@ -1,5 +1,6 @@
 @import url(./circle-preloader/circle-preloader.css);
 @import url(./__text/__text.css);
+@import url(./_hidden/preloader_hidden.css);
 
 .preloader {
 	display: flex;
@@ -13,3 +14,4 @@
     padding-top: 75px;
     padding-bottom: 79px;
 }
+
