@@ -18,19 +18,19 @@ export default class NewsCard {
     }
 
     create() {
-        const newsCard = createNode('a', 'result-card');
+        const newsCard = createNode('div', 'result-card');
         const newsCardImageSize = createNode('div', 'result-card__image-size');
         const newsCardImage = createNode('img', 'result-card__image');
         const newsCardInfo = createNode('div', 'result-card__info');
         const newsCardDate = createNode('div', 'result-card__date');
         const newsCardBox = createNode('div', 'result-card__box');
-        const newsCardTitle = createNode('div', 'result-card__title');
+        const newsCardTitle = createNode('a', 'result-card__title');
         const newsCardText = createNode('p', 'result-card__text');
         const newsCardSource = createNode('p', 'result-card__source');
 
-        newsCard.setAttribute('href', this.url);
         newsCardImage.src = this.urlToImage;
         newsCardDate.textContent = makeFormattedDate(this.publishedAt);
+        newsCardTitle.setAttribute('href', this.url);
         newsCardTitle.textContent = this.title;
         newsCardText.textContent  = this.description;
         newsCardSource.textContent = this.source.name;
