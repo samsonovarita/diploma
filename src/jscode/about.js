@@ -1,12 +1,19 @@
 import "./../style.css";
 
 import {Api} from "./modules/Api.js";
+// import {CommitCard} from "./modules/CommitCard.js";
+import {CommitList} from "./modules/CommitList.js";
 
-const getCommits = new Api("https://api.github.com/repos/samsonovarita/diploma/commits?per_page=20");
-getCommits.getApiData();
 
 // import Swiper from "swiper";
 // import {swiperConfig} from "./modules/swiperConfig.js";
 
 // const mySwiper = new Swiper(swiperConfig.container, swiperConfig.settings);
 
+const getCommits = new Api("https://api.github.com/repos/samsonovarita/diploma/commits?per_page=20");
+getCommits.getApiData()
+.then(res => {
+    if (res && res.length > 0) { 
+    new CommitList(document.querySelector('.swiper__slide-container'), res);
+    }
+  })
