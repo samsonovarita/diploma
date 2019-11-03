@@ -1,22 +1,21 @@
 import { CommitCard } from "./CommitCard.js";
 
 export class CommitList {
-  constructor(box, commits) {
+  constructor(box, commit_data) {
     this.box = box;
-    this.commits = commits;
-    this.render(commits);
+   // this.commit_data = commit_data;
+    this.render(commit_data);
   }
 
-  addCard(commit) {
-    const { cardElement } = new CommitCard(commit.date, commit.avatar_url, commit.name, commit.email, commit.message);
-    // console.log(cardElement);
+  addCard(commit_data_item) {
+    const { cardElement } = new CommitCard(commit_data_item);
     this.box.appendChild(cardElement);
   }
 
-  render(commits) {
+  render(commit_data) {
     // console.dir(this.commits);
     // this.cards.forEach((elem) => {
-    commits.forEach((elem) => {
+    commit_data.forEach((elem) => {
       // console.log(elem);
       this.addCard(elem)
     })

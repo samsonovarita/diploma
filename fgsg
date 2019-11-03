@@ -1,0 +1,128 @@
+[33mcommit ef6b28880cfd6a3e7bd66cc9f77d0daf3b89a3f7[m[33m ([m[1;36mHEAD -> [m[1;32mreview[m[33m, [m[1;31morigin/review[m[33m, [m[1;31morigin/level-2[m[33m, [m[1;32mlevel-2[m[33m)[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Thu Oct 31 22:02:32 2019 +0300
+
+    add class CommitList.js
+
+[33mcommit e24cacc224e5a23f52aa3b5f89bf71871b3148ee[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Thu Oct 31 07:45:45 2019 +0300
+
+    add class commitCard
+
+[33mcommit 0051a3127f0d0de7916574c3559ae2e7c0d32cd3[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Wed Oct 30 07:43:38 2019 +0300
+
+    date for searching news is fixed
+
+[33mcommit 42ab4e09b8e2dae3ae1386ff84c3c8f02d94e18b[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Tue Oct 29 19:55:16 2019 +0300
+
+    Add: changeDate.js,  swiperConfig.js
+
+[33mcommit 1a3cb8ee2060264b21ebdfb9afe272247f069780[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Tue Oct 29 07:42:36 2019 +0300
+
+    Doing source.name
+
+[33mcommit f3af9d670c641e81af75b377fb617b2769497803[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Mon Oct 28 23:00:46 2019 +0300
+
+    cards are added
+
+[33mcommit 08ae66905442651bf850b129e217ba0b7026ef86[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Mon Oct 28 22:11:08 2019 +0300
+
+    Making class NewsCard
+
+[33mcommit e65fd3a27bca5e9b7f0ae46039bd3fa3fc2ba5ed[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Sun Oct 27 21:11:47 2019 +0300
+
+    NewsCard
+
+[33mcommit 51aa6f34cede5a0d53b3d26b93531f1d4153bc2f[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Thu Oct 24 21:08:45 2019 +0300
+
+    First commit in branch level-2
+
+[33mcommit c7dcfb528feb8581dfd021aab5c6a9831a135ec8[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: d84bf9c 2ed6056
+Author: samsonovarita <55363907+samsonovarita@users.noreply.github.com>
+Date:   Tue Oct 22 19:55:11 2019 +0300
+
+    Merge pull request #1 from samsonovarita/level-1
+    
+    Создал PR
+
+[33mcommit 2ed6056900159c6713e8079706a021fbcb1e24bf[m[33m ([m[1;31morigin/level-1[m[33m, [m[1;32mlevel-1[m[33m)[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Sun Oct 20 23:12:48 2019 +0300
+
+    few more changes
+
+[33mcommit beb6d85629d44f31843347518cee93d59f16403e[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Sun Oct 20 22:43:41 2019 +0300
+
+    add hover to results__button
+
+[33mcommit 3dac59adff04e051b26e4e7925b15256d1da4594[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Sun Oct 20 22:08:02 2019 +0300
+
+    add pictures
+
+[33mcommit 5f21a27a668369492c28741141877933e17c4c61[m[33m ([m[1;33mtag: v0.0.5[m[33m)[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Sun Oct 20 21:18:10 2019 +0300
+
+    comments from first review were implemented
+
+[33mcommit 3c8cf6143cd581db4bbf817b8141463194f9dea6[m[33m ([m[1;33mtag: v0.0.4[m[33m)[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Fri Oct 18 01:16:24 2019 +0300
+
+    First review
+
+[33mcommit 653ed09ecadda45165d3cc2bfe5dc3b594540ce7[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Wed Oct 16 21:26:31 2019 +0300
+
+    Add swiper library
+
+[33mcommit 5a0750891c4307045954fe53d2eb7279d4be1f31[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Wed Oct 16 00:37:08 2019 +0300
+
+    Not ready github and diagram
+
+[33mcommit 444ae17ede9af2b034904118c70eb8191e4b6977[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Tue Oct 15 08:00:37 2019 +0300
+
+    Page 1 not ready
+
+[33mcommit ee641fc2c0a07d0bf75dd645e8cd235588baccd4[m[33m ([m[1;33mtag: v0.0.3[m[33m, [m[1;33mtag: log[m[33m)[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Fri Oct 11 19:16:13 2019 +0300
+
+    Search and header on main page are done
+
+[33mcommit 3341c4d5710746007be488e4ab2fad2a7318e6d7[m[33m ([m[1;33mtag: v0.0.2[m[33m)[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Mon Oct 7 18:06:50 2019 +0300
+
+    Webpack is added
+
+[33mcommit d84bf9c8d0340d29fe6f727d2bb8de75dffa9eee[m[33m ([m[1;33mtag: v0.0.1[m[33m)[m
+Author: Margarita Samsonova <ritiksamsonova@yandex.ru>
+Date:   Sat Oct 5 11:14:40 2019 +0300
+
+    First commit

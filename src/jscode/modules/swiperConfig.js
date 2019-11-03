@@ -11,8 +11,8 @@ export const swiperConfig = {
             clickable: true
         },
         navigation: {
-            nextEl: '.swiper__gradient swiper__gradient_right',
-            prevEl: '.swiper__gradient swiper__gradient_left'
+            nextEl: '.swiper__control-slide-arrow_right',
+            prevEl: '.swiper__control-slide-arrow_left'
         },
         breakpoints: {
             100: {

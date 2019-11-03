@@ -2,12 +2,13 @@ import {createNode} from "./NewsCard.js";
 import {makeFormattedDate} from "./changeDate.js";
 
 export class CommitCard {
-    constructor(date, avatar_url, name, email, message) {
-        this.date = date;
-        this.avatar_url = avatar_url;
-        this.name = name;
-        this.email = email;
-        this.message = message;
+    constructor(commit_data_item) {
+        this.date = commit_data_item.commit.committer.date;
+        this.avatar_url = commit_data_item.author.avatar_url;
+        this.name = commit_data_item.commit.author.name;
+        this.email = commit_data_item.commit.author.email;
+        this.message = commit_data_item.commit.message;
+
         this.cardElement = this.create();
     }
 
@@ -21,8 +22,7 @@ export class CommitCard {
         const commitEmail = createNode('div', 'swiper__email');
         const commitCommit = createNode('div', 'swiper__commit')
 
-        commitImg.src = this.commiter.avatar_url;
-        // console.log(this.avatar_url);
+        commitImg.src = this.avatar_url;
         commitImg.style.backgroundImage = `url(${this.avatar_url})`;
         commitDate.textContent = makeFormattedDate(this.date);
         commitName.textContent = this.name;

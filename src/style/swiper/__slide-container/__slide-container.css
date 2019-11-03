@@ -1,11 +1,13 @@
 .swiper__slide-container {
-    display: grid;
-    grid-gap: 16px;
-    grid-auto-flow: column;
-    overflow: hidden;
-    padding: 0 104px 48px;
+    width: calc(100% - 40px);
     position: relative;
-    justify-content: center;
+}
+
+.swiper-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    padding-bottom: 48px;
+
 }
 
 @media (max-width: 768px) {
