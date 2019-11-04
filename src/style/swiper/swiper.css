@@ -18,6 +18,7 @@
 @import url(./__buttons/swiper__buttons.css);
 @import url(./__button/swiper__button.css);
 @import url(./__github-link/swiper__github-link.css);
+@import url(./__wrapper/swiper__wrapper.css);
 
 .swiper {
     width: 100%;

@@ -25,3 +25,9 @@
         margin-top: 23px;
     }
 }
+
+@media (max-width: 320px) {
+    .swiper__github-link {
+        margin-top: 6px;
+    }
+}

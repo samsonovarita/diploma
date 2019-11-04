@@ -3,31 +3,22 @@
     position: relative;
 }
 
-.swiper-wrapper {
-    display: grid;
-    grid-auto-flow: column;
-    padding-bottom: 48px;
-
-}
-
 @media (max-width: 768px) {
     .swiper__slide-container {
-        margin-left: 1027px;
         grid-gap: 8px;
-        padding: 0 104px 32px;
+        width: calc(100% - 78px);
     }
 }
 
 @media (max-width: 710px) {
     .swiper__slide-container {
-        margin-left: 1082px;
+
     }
 }
 
-
 @media (max-width: 320px) {
     .swiper__slide-container {
-        margin-left: 1175px;
         padding-bottom: 17px;
+        width: calc(100% - 32px);
     }
 }
