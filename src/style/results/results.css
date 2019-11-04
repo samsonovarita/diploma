@@ -14,13 +14,16 @@
     /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
+    
     width: 100%;
     align-items: center;
+    padding-bottom: 80px;
+
 }
 
 @media (max-width: 768px) {
     .results {
-        
+        padding-bottom: 40px;
     }
 }
 

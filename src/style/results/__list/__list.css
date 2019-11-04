@@ -1,30 +1,28 @@
 .results__list {
     display: grid;
+    width: calc(100% - 208px);
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 16px;
     margin-top: 16px;
-    /* padding: 0 104px; */
-    width: 1236px;
 }
 
 @media (max-width: 1280px) {
     .results__list {
         grid-gap: 8px;
-        padding: 0 50px;
+        width: calc(100% - 140px);
     }
 }
 
 @media (max-width: 900px) {
     .results__list {
         grid-gap: 8px;
-        padding: 0 30px;
+        width: calc(100% - 80px);
     }
 }
 
 @media (max-width: 768px) {
     .results__list {
         grid-gap: 8px;
-        padding: 0 40px;
     }
 }
 
@@ -38,7 +36,7 @@
 @media (max-width: 500px) {
     .results__list {
         grid-template-columns: repeat(1, 1fr);
+        width: calc(100% - 32px);
         margin-top: 23px;
-        padding: 0 16px;
     }
 }    

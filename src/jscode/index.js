@@ -5,7 +5,7 @@ import { ResultList } from "./modules/ResultList.js";
 import { makeFormattedDate } from "./modules/changeDate.js";
 
 
-const search = function () {
+const search = function (event) {
   const searchInput = document.querySelector(".search__input").value;
   let res = new Api(`https://newsapi.org/v2/everything?q=${searchInput}&apiKey=${apiNews}&pageSize=100&from=${today}&to=${previousWeek}&language=ru`);
 
