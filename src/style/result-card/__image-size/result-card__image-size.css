@@ -1,10 +1,10 @@
 .result-card__image-size {
     width: 100%;
-    /* height: 272px; */
-    height: 19vw;
+    height: 272px;
+    /* height: 19vw; */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
     .result-card__image-size {
         height: 19vw;
     }

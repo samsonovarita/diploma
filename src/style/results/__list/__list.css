@@ -20,6 +20,12 @@
     }
 }
 
+@media (max-width: 865px) {
+    .results__list {
+        width: calc(100% - 40px);
+    }
+}
+
 @media (max-width: 768px) {
     .results__list {
         grid-gap: 8px;

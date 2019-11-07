@@ -1,10 +1,7 @@
 import "./../style.css";
 
 import {Api} from "./modules/Api.js";
-// import {CommitCard} from "./modules/CommitCard.js";
 import {CommitList} from "./modules/CommitList.js";
-
-
 import Swiper from "swiper";
 import {swiperConfig} from "./modules/swiperConfig.js";
 
