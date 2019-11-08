@@ -1,6 +1,7 @@
 .about-author__image {
     margin-right: 56px;
     max-height: 45vw;
+    border-radius: 50%;
 }
 
 @media (max-width: 900px) {

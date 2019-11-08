@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <title>О проекте</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
 </head>
+
 <body>
     <div class="page">
         <div class="content">
@@ -66,10 +68,13 @@
                 <img class="about-author__image" alt="avatar" src="<%=require('./images/avatar/image-03.png')%>">
                 <div class="about-author__infobox">
                     <h2 class="about-author__title">Об авторе</h2>
-                    <p class="about-author__info">Это блок с описаением автора проекта. Здесь следует указать, как вас
-                        зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
-                    <p class="about-author__info">Также можно рассказать о процессе обучения в Практикуме, чему вы тут
-                        научились, и чем можете помочь потенциальным заказчикам.</p>
+                    <p class="about-author__info">Всем привет! Меня зовут Самсонова Рита и я Junior Frontend Developer.
+                        Перед вами моя дипломная работа курса Фронтенд разработка от Яндекс.Практикума.
+                        Этот проект выполнен с применением стека: HTML, CSS, JavaScript, Webpack и git, кроме этого к
+                        сайту подключена внешняя библиотека для слайдера.</p>
+                    <p class="about-author__info">За время обучения в Яндекс.Практикуме я освоила адаптивную и
+                        кроссбраузерную верстку, методы объектно-ориентированного и асинхронного программирования,
+                        работала со сборщиком (webpack) и контролировала версии с помощью git.</p>
                 </div>
             </section>
             <section class="swiper section">
@@ -113,7 +118,8 @@
                             <a href="about.html" class="footer__link-item">О&nbsp;проекте</a>
                         </li>
                         <li>
-                            <a href="https://praktikum.yandex.ru/" class="footer__link-item" target="_blank">Яндекс.Практикум</a>
+                            <a href="https://praktikum.yandex.ru/" class="footer__link-item"
+                                target="_blank">Яндекс.Практикум</a>
                         </li>
                     </ul>
                 </nav>
@@ -128,4 +134,5 @@
     </div>
     <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
 </body>
+
 </html>
