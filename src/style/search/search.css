@@ -1,9 +1,11 @@
-@import url(./__title/__title.css);
-@import url(./__subtitle.css/__subtitle.css);
-@import url(./__control/__control.css);
-@import url(./__button/__button.css);
-@import url(./__input/__input.css);
+@import url(./__title/search__title.css);
+@import url(./__subtitle.css/search__subtitle.css);
+@import url(./__control/search__control.css);
+@import url(./__button/search__button.css);
+@import url(./__input/search__input.css);
 @import url(./__error-message/search__error-message.css);
+@import url(./__image/search__image.css);
+@import url(./__image-container/search__image-container.css);
 
 .search {
     display: flex;
@@ -11,9 +13,9 @@
     height: 576px;
     flex-direction: column;
     align-items: center;
-    background-image: url(../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
-    background-size: cover;
     color: white;
+    position: relative;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {

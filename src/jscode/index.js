@@ -1,4 +1,4 @@
-import "./../style.css";
+import "../css/index.css";
 import { Api } from "./modules/Api.js";
 import { apiNews, today, previousWeek } from "./modules/constants.js";
 import { ResultList } from "./modules/ResultList.js";

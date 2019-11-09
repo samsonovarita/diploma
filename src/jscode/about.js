@@ -1,4 +1,4 @@
-import "./../style.css";
+import "./../css/about.css";
 
 import {Api} from "./modules/Api.js";
 import {CommitList} from "./modules/CommitList.js";

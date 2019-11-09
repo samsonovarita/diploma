@@ -1,5 +1,5 @@
-@import url(./circle-preloader/circle-preloader.css);
-@import url(./__text/__text.css);
+@import url(./__circle/preloader__circle.css);
+@import url(./__text/preloader__text.css);
 @import url(./_hidden/preloader_hidden.css);
 
 .preloader {

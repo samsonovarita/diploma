@@ -1,10 +1,10 @@
-@import url(./__analysis/__analysis.css);
-@import url(./__list/__list.css);
-@import url(./__title/__title.css);
-@import url(./__header/__header.css);
-@import url(./__button/__button.css);
-@import url(./__arrow/__arrow.css);
-@import url(./__link/__link.css);
+@import url(./__analysis/results__analysis.css);
+@import url(./__list/results__list.css);
+@import url(./__title/results__title.css);
+@import url(./__header/results__header.css);
+@import url(./__button/results__button.css);
+@import url(./__arrow/results__arrow.css);
+@import url(./__link/results__link.css);
 @import url(./_hidden/results_hidden.css);
 
 .results {

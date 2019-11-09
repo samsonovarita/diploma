@@ -1,1 +1,1 @@
-import "./../style.css";
+import "./../css/analysis.css";

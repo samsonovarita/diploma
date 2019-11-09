@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Сервис для анализа происходящих в мире событий. Его задача — установить, насколько популярны в мире новости на определённую тему."/>
-    <meta name="author" content="Маргарита Самсонова"/>
+    <meta name="description"
+        content="Сервис для анализа происходящих в мире событий. Его задача — установить, насколько популярны в мире новости на определённую тему." />
+    <meta name="author" content="Маргарита Самсонова" />
     <title>Диплом</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
+
 <body>
     <div class="page">
         <div class="content">
             <section class="search section">
+                <picture class="search__image-container">
+                    <source class="search__image" media="(max-width: 320px)"
+                        srcset="<%=require('./images/phone320.jpg')%>">
+                    <source class="search__image" media="(max-width: 768px)"
+                        srcset="<%=require('./images/phone768.jpg')%>">
+                    <img class="search__image" src="<%=require('./images/phone.jpg')%>" alt="picture with phone">
+                </picture>
                 <header class="header section">
                     <a href="index.html" class="header__logo header__logo_white">NewsAnalyzer</a>
                     <div class="header__navigation">
                         <a href="index.html" class="header__navigation-item header__navigation-item_active">Главная</a>
-                        <a href="about.html" class="header__navigation-item">О&nbsp;проекте</a> 
+                        <a href="about.html" class="header__navigation-item">О&nbsp;проекте</a>
                     </div>
                 </header>
                 <h1 class="search__title">Что в мире творится?</h1>
-                <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
+                <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в
+                    новостях за прошедшую неделю.</h2>
                 <div class="search__control">
                     <input class="search__input" type="text" placeholder="Введите слово" required>
                     <button class="search__button" id="searchButton">Искать</button>
@@ -29,7 +40,7 @@
                 <span class="search__error-message"></span>
             </section>
             <section class="preloader preloader_hidden section">
-                <i class="circle-preloader"></i>
+                <i class="preloader__circle"></i>
                 <p class="preloader__text">Идет поиск новостей...</p>
             </section>
             <section class="error error_hidden section">
@@ -42,7 +53,8 @@
                     <h2 class="results__title">Результаты поиска</h2>
                     <a href="analysis.html" class="results__link">
                         <h3 class="results__analysis">Посмотреть аналитику</h3>
-                        <img class="results__arrow" alt="arrow" src="<%=require('./images/arrow/icons/black/arrow.png')%>">
+                        <img class="results__arrow" alt="arrow to analysis"
+                            src="<%=require('./images/arrow/icons/black/arrow.png')%>">
                     </a>
                 </div>
                 <div class="results__list">
@@ -124,12 +136,15 @@
                     <h2 class="about-author__title">Об авторе</h2>
                     <p class="about-author__info">Всем привет! Меня зовут Самсонова Рита и я Junior Frontend Developer.
                         Перед вами моя дипломная работа курса Фронтенд разработка от Яндекс.Практикума.
-                        Этот проект выполнен с применением стека: HTML, CSS, JavaScript, Webpack и git, кроме этого к сайту подключена внешняя библиотека для слайдера.</p>
-                    <p class="about-author__info">За время обучения в Яндекс.Практикуме я освоила адаптивную и кроссбраузерную верстку, методы объектно-ориентированного и асинхронного программирования, работала со сборщиком (webpack) и контролировала версии с помощью git.</p>
+                        Этот проект выполнен с применением стека: HTML, CSS, JavaScript, Webpack и git, кроме этого к
+                        сайту подключена внешняя библиотека для слайдера.</p>
+                    <p class="about-author__info">За время обучения в Яндекс.Практикуме я освоила адаптивную и
+                        кроссбраузерную верстку, методы объектно-ориентированного и асинхронного программирования,
+                        работала со сборщиком (webpack) и контролировала версии с помощью git.</p>
                 </div>
             </section>
             <footer class="footer section">
-                <p class="footer__copyright">&copy;&nbsp;2019&nbsp;Supersite</p>
+                <p class="footer__copyright">&copy;&nbsp;2019&nbsp;Самсонова&nbsp;Рита</p>
                 <nav class="footer__nav">
                     <ul class="footer__links">
                         <li>
@@ -139,17 +154,21 @@
                             <a href="about.html" class="footer__link-item">О&nbsp;проекте</a>
                         </li>
                         <li>
-                            <a href="https://praktikum.yandex.ru/" class="footer__link-item" target="_blank">Яндекс.Практикум</a>
+                            <a href="https://praktikum.yandex.ru/" class="footer__link-item"
+                                target="_blank">Яндекс.Практикум</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="footer__icons">
-                    <a class="footer__icon-item" href="https://github.com/samsonovarita" target="_blank"><img alt="github icon" src="<%=require('./images/icon/github.png')%>"></a>
-                    <a class="footer__icon-item" href="https://www.facebook.com/margarita.samsonova1" target="_blank"><img alt="facebook icon" src="<%=require('./images/icon/facebook.png')%>"></a>
+                    <a class="footer__icon-item" href="https://github.com/samsonovarita" target="_blank"><img
+                            alt="github icon" src="<%=require('./images/icon/github.png')%>"></a>
+                    <a class="footer__icon-item" href="https://www.facebook.com/margarita.samsonova1"
+                        target="_blank"><img alt="facebook icon" src="<%=require('./images/icon/facebook.png')%>"></a>
                 </div>
             </footer>
         </div>
     </div>
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
+
 </html>
