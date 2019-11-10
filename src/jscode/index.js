@@ -10,12 +10,14 @@ const search = function (event) {
   let res = new Api(`https://newsapi.org/v2/everything?q=${searchInput}&apiKey=${apiNews}&pageSize=100&from=${today}&to=${previousWeek}&language=ru`);
 
   document.querySelector(".preloader").classList.remove("preloader_hidden");
-
+  document.querySelector(".error").classList.add("error_hidden");
+  document.querySelector(".results").classList.add("results_hidden");
   res.getApiData()
 
     .then(res => {
       document.querySelector(".preloader").classList.add("preloader_hidden");
       document.querySelector(".results").classList.remove("results_hidden");
+
       test(res.articles, searchInput);
       const List = new ResultList(document.querySelector('.results__list'), res.articles);
     })
