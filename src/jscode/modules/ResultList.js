@@ -29,9 +29,24 @@ export class ResultList {
       if ((this.row * 3 + 3) >= this.cards.length) {
         button.classList.add('results__button_hidden');
       }
+      else {
+        button.classList.remove('results__button_hidden');
+      }
     });
     if ((this.row * 3 + 3) >= this.cards.length) {
       button.classList.add('results__button_hidden');
     }
+    else {
+        button.classList.remove('results__button_hidden');
+      }
   }
+
+  clearList() {
+    const list = document.querySelector('.results__list');
+    const card = document.querySelectorAll('.result-card');
+    list.removeChild(card);
+  }
+  // removeChilds() {
+	// 	document.querySelectorAll(".result-card").forEach(item => item.remove());
+	// }
 }

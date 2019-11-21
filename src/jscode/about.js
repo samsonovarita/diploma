@@ -14,3 +14,4 @@ getCommits.getApiData()
     const mySwiper = new Swiper(swiperConfig.container, swiperConfig.settings);
   }
   })
+ 
