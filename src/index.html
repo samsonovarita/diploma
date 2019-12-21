@@ -21,7 +21,7 @@
                         srcset="<%=require('./images/phone768.jpg')%>">
                     <img class="search__image" src="<%=require('./images/phone.jpg')%>" alt="picture with phone">
                 </picture>
-                <header class="header section">
+                <header class="header header_index section">
                     <a href="index.html" class="header__logo header__logo_white">NewsAnalyzer</a>
                     <div class="header__navigation">
                         <a href="index.html" class="header__navigation-item header__navigation-item_active">Главная</a>
@@ -31,11 +31,11 @@
                 <h1 class="search__title">Что в мире творится?</h1>
                 <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в
                     новостях за прошедшую неделю.</h2>
-                <div class="search__control">
+                <div class="search__control" id="searchForm">
                     <input class="search__input" type="text" placeholder="Введите слово" required>
                     <button class="search__button" id="searchButton">Искать</button>
                 </div>
-                <span class="search__error-message"></span>
+                <span class="search__error-message search__error-message_hidden">Это обязательное поле</span>
             </section>
             <section class="preloader preloader_hidden section">
                 <i class="preloader__circle"></i>

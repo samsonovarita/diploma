@@ -1,55 +1,79 @@
 import "../css/index.css";
 import { Api } from "./modules/Api.js";
-import { apiNews, today, previousWeek } from "./modules/constants.js";
+import { apiNews } from "./modules/constants.js";
 import { ResultList } from "./modules/ResultList.js";
-import { makeFormattedDate } from "./modules/changeDate.js";
 
+const submitButton = document.querySelector('.search__button');
+const searchField = document.querySelector(".search__input");
 
-const search = function (event) {
+let resultList = new ResultList(document.querySelector(".results__list"));
+checkLocalStorage();
+
+function checkLocalStorage() {
+  let results = localStorage["results"];
+  let query = localStorage["title"];
+  
+  if (results != undefined && query != undefined) {
+    document.querySelector(".results").classList.remove("results_hidden");
+    resultList.setData(JSON.parse(results).articles);
+
+    document.querySelector(".search__input").value = query;
+  }
+}
+
+function activateFormButton(btnElement, state) {
+  if (state) {
+    console.log('Активирую кнопку');
+    btnElement.removeAttribute('disabled');
+    btnElement.classList.add('search__button_active');
+  }
+  else {
+    console.log('Деактивирую кнопку');
+    btnElement.setAttribute('disabled', true);
+    btnElement.classList.remove('search__button_active');
+  }
+};
+
+function validateInput() {
+  event.preventDefault();
+  if (searchField.value.length > 0) {
+    document.querySelector(".search__error-message").classList.add("search__error-message_hidden");
+    activateFormButton(submitButton, true);
+    document.querySelector("#searchButton").addEventListener('click', search);
+  }
+  else {
+    document.querySelector(".search__error-message").classList.remove("search__error-message_hidden");
+    activateFormButton(submitButton, false);
+  }
+}
+
+function search(event) {
+  submitButton.setAttribute('disabled', true);
   const searchInput = document.querySelector(".search__input").value;
-  let res = new Api(`https://newsapi.org/v2/everything?q=${searchInput}&apiKey=${apiNews}&pageSize=100&from=${today}&to=${previousWeek}&language=ru`);
+  let request = new Api(`https://newsapi.org/v2/everything?q=${searchInput}&apiKey=${apiNews}&pageSize=100&from=${today}&to=${previousWeek}&language=ru`);
 
   document.querySelector(".preloader").classList.remove("preloader_hidden");
   document.querySelector(".error").classList.add("error_hidden");
   document.querySelector(".results").classList.add("results_hidden");
-  res.getApiData()
 
-    .then(res => {
+  request.getApiData()
+    .then(results => {
+
       document.querySelector(".preloader").classList.add("preloader_hidden");
       document.querySelector(".results").classList.remove("results_hidden");
 
-      test(res.articles, searchInput);
-      const List = new ResultList(document.querySelector('.results__list'), res.articles);
+      resultList.setData(results.articles);
+
+      localStorage.setItem('results', JSON.stringify(results));
+      localStorage.setItem('title', searchInput);
+      document.querySelector("#searchButton").removeEventListener;
+
     })
     .catch(res => {
       document.querySelector(".preloader").classList.add("preloader_hidden");
       document.querySelector(".error").classList.remove("error_hidden");
     })
+
 }
 
-function test(data, query) {
-  let stats = {};
-  // let totalResults
-  // let data = 
-  // const query = document.querySelector(".search__input");
-
-  data.forEach(function (element) {
-    let date = makeFormattedDate(element.publishedAt);
-    if (stats[date] == undefined) {
-      stats[date] = 0;
-    }
-    console.log(query);
-    stats[date] += element.description.split(query).length - 1;
-  });
-  localStorage["stats"] = JSON.stringify(stats);
-  localStorage["query"] = query;
-  localStorage["data.length"] = data.length;
-  // console.log(stats);
-}
-// JSON.parse(localStorage["stats"]) вызвать на странице analysis.js
-
-// document.querySelectorAll(".result-card").forEach(function(elem) {
-//   elem.remove();
-// })
-
-document.querySelector("#searchButton").addEventListener('click', search);
+searchField.addEventListener('input', validateInput);

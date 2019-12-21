@@ -1,4 +1,5 @@
-@import url(./_bold/answer__news_bold.css);
+@import url(./_total/answer__news_total.css);
+@import url(./_in-title/answer__news_in-title.css);
 
 .answer__news {
     font-family: Roboto;
