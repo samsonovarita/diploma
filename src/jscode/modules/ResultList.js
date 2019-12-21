@@ -1,13 +1,19 @@
 import NewsCard from './NewsCard.js';
 
 export class ResultList {
-  constructor(box, cards) {
+  constructor(box) {
     this.box = box;
-    this.cards = cards;
+    this.moreButton = document.querySelector(".results__button");
+    
+    this.moreButton.addEventListener('click', this.renderMoreCards.bind(this));
+  }
+
+  setData(cardsData) {
+    this.cards = cardsData;
+    this.clearList();
 
     this.row = 0;
-    this.render(cards);
-    this.moreCards();
+    this.render(cardsData);
   }
 
   addCard(card) {
@@ -21,32 +27,21 @@ export class ResultList {
     })
   }
 
-  moreCards() {
-    const button = document.querySelector(".results__button");
-    button.addEventListener('click', () => {
-      this.row += 1;
-      this.render();
-      if ((this.row * 3 + 3) >= this.cards.length) {
-        button.classList.add('results__button_hidden');
-      }
-      else {
-        button.classList.remove('results__button_hidden');
-      }
-    });
+  renderMoreCards() {
+    this.row += 1;
+    this.render();
+    
     if ((this.row * 3 + 3) >= this.cards.length) {
-      button.classList.add('results__button_hidden');
+      this.moreButton.classList.add('results__button_hidden');
+    } else {
+      this.moreButton.classList.remove('results__button_hidden');
     }
-    else {
-        button.classList.remove('results__button_hidden');
-      }
   }
 
   clearList() {
-    const list = document.querySelector('.results__list');
-    const card = document.querySelectorAll('.result-card');
-    list.removeChild(card);
+    const cards = document.querySelectorAll('.result-card');
+    cards.forEach((card) => {
+      this.box.removeChild(card);
+    })
   }
-  // removeChilds() {
-	// 	document.querySelectorAll(".result-card").forEach(item => item.remove());
-	// }
 }

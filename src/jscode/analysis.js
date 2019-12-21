@@ -1,98 +1,74 @@
 import "./../css/analysis.css";
-import { apiNews, today, previousWeek } from "./modules/constants.js";
-
-const date = new Date();
-const oneDay = 24 * 60 * 60 * 1000;
-const weekAgoTimestamp = 6 * oneDay;
-const ago = new Date(date.getTime() - weekAgoTimestamp);
-
-// Массив чисел дней
-const weekDays = arrOfDays(ago);
-const days = daysWeek(ago);
 
 const month = ['ЯНВАРЬ', 'ФЕВРАЛЬ', 'МАРТ', 'АПРЕЛЬ', 'МАЙ', 'ИЮНЬ', 'ИЮЛЬ', 'АВГУСТ', 'СЕНТЯБРЬ', 'ОКТЯБРЬ', 'НОЯБРЬ', 'ДЕКАБРЬ'];
 const day = [ 'вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
 
 //получение данных со страницы поиска
 const results = JSON.parse(localStorage.getItem('results'));
+const query = localStorage.getItem('title').toLowerCase();
 
-//получение массива дат с API из LocalStorage
-const publishedDate = results.articles.map((el) => {return el.publishedAt});
-const renderedDate = publishedDate.map((el) => {return new Date(el).getDate()});
+//подстановка данных в верхнюю часть страницы
+document.querySelector("#query").textContent=query
+document.querySelector(".answer__news_total").textContent=results.totalResults
 
-const countTitles = 
-    results.articles.filter(el => {
-        return el.title.toLowerCase().includes(`${localStorage.getItem('title').toLowerCase()}`) }
-    ).length;
+const today = new Date();
+const millisecondsIn24HRS = 60 * 60 * 24 * 1000;
 
-// получение массива чисел дней
-function arrOfDays(a) {
-    const arr = [];
-    for (let i = 0; i < 7; i += 1) {
-        arr.push(new Date(ago.getTime() + oneDay*i).getDate());
+let datesStr = [] // то же смое но в формате ГГГГ - ММ - ДД
+let dateLabels = [] //массив дней недели
+
+for (let i = 0; i < 7; i++) {
+    let tempDate = new Date(today - millisecondsIn24HRS * i)
+    let tempDateStr = tempDate.getFullYear() + "-" + myGetMonth(tempDate) + "-" + myGetDate(tempDate)
+    let tempDayLabel = tempDate.getDate() + ", " + day[tempDate.getDay()]
+
+    datesStr.push(tempDateStr)
+    dateLabels.push(tempDayLabel)
+}
+
+function myGetDate(date) {
+    const day = date.getDate();
+    if (day >= 10) {
+        return day;
+    } else {
+        return '0' + day;
     }
-    return arr
 }
 
-// получение массива дней недели 
-function daysWeek(a) {
-    const arr = [];
-    for (let i = 0; i < 7; i += 1) {
-        arr.push(new Date(ago.getTime() + oneDay*i).getDay());
+function myGetMonth(date) {
+    const month = date.getMonth() + 1;
+    if (month >= 10) {
+        return month;
+    } else {
+        return '0' + month;
     }
-    return arr
 }
 
-// количество новостей за каждый из дней
-function newsInDay(n) {
-    return renderedDate.filter((el) => {
-        return el == n
-    }).length
+const dateDivs = document.querySelectorAll(".diagram__date");
+const barDivs = document.querySelectorAll(".diagram__bar");
+let totalMentions = 0
+
+for (let i = 0; i < 7; i++) {
+    dateDivs[6 - i].textContent = dateLabels[i];
+    
+    const resultInDay = countResultsForQueryAndDate(results.articles, query, datesStr[i]);
+    totalMentions += resultInDay;
+
+    barDivs[6 - i].textContent = resultInDay;
+    barDivs[6 - i].style.width = resultInDay + "%";
 }
 
-// день недели 
-function dayOfWeek() {
-    return days.map((el) => { return day[el] })
+function countResultsForQueryAndDate(results, query, date) {
+    let counter = 0;
+
+    results.forEach(function(result) {
+        if (result.title.toLowerCase().includes(query.toLowerCase()) && result.publishedAt.includes(date)) {
+            counter++;
+        }
+    });
+
+    return counter;
 }
 
-//общая информация
-document.querySelector('.answer__title').textContent = `Вы спросили: «${localStorage.getItem('title').replace(/[\"]/gim, "")}»`
-document.querySelector('.answer__news_total').textContent = results.totalResults;
-document.querySelector('.answer__news_in-title').textContent = countTitles;
-document.querySelector('.diagram__text').textContent = `Дата (${month[new Date().getMonth()]})`;
-
-
-// первый день
-document.querySelector('.diagram__bar_one').setAttribute('style', `width: ${newsInDay(weekDays[0])}%`);
-document.querySelector('.diagram__bar_one').textContent = newsInDay(weekDays[0]);
-document.querySelector('.diagram__date_one').textContent = `${weekDays[0]}, ${dayOfWeek()[0]}`;
-
-// второй день
-document.querySelector('.diagram__bar_two').setAttribute('style', `width: ${newsInDay(weekDays[1])}%`);
-document.querySelector('.diagram__bar_two').textContent = newsInDay(weekDays[1]);
-document.querySelector('.diagram__date_two').textContent = `${weekDays[1]}, ${dayOfWeek()[1]}`;
-
-// третий день
-document.querySelector('.diagram__bar_three').setAttribute('style', `width: ${newsInDay(weekDays[2])}%`);
-document.querySelector('.diagram__bar_three').textContent = newsInDay(weekDays[2]);
-document.querySelector('.diagram__date_three').textContent = `${weekDays[2]}, ${dayOfWeek()[2]}`;
-
-// четвертый день
-document.querySelector('.diagram__bar_four').setAttribute('style', `width: ${newsInDay(weekDays[3])}%`);
-document.querySelector('.diagram__bar_four').textContent = newsInDay(weekDays[3]);
-document.querySelector('.diagram__date_four').textContent = `${weekDays[3]}, ${dayOfWeek()[3]}`;
-
-// пятый день
-document.querySelector('.diagram__bar_five').setAttribute('style', `width: ${newsInDay(weekDays[4])}%`);
-document.querySelector('.diagram__bar_five').textContent = newsInDay(weekDays[4]);
-document.querySelector('.diagram__date_five').textContent = `${weekDays[4]}, ${dayOfWeek()[4]}`;
-
-// шестой день
-document.querySelector('.diagram__bar_six').setAttribute('style', `width: ${newsInDay(weekDays[5])}%`);
-document.querySelector('.diagram__bar_six').textContent = newsInDay(weekDays[5]);
-document.querySelector('.diagram__date_six').textContent = `${weekDays[5]}, ${dayOfWeek()[5]}`;
-
-// седьмой день
-document.querySelector('.diagram__bar_seven').setAttribute('style', `width: ${newsInDay(weekDays[6])}%`);
-document.querySelector('.diagram__bar_seven').textContent = newsInDay(weekDays[6]);
-document.querySelector('.diagram__date_seven').textContent = `${weekDays[6]}, ${dayOfWeek()[6]}`;
+document.querySelector(".answer__news_in-title").textContent=totalMentions
+document.querySelector("#month").textContent=month[today.getMonth()]
