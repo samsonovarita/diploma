@@ -11,7 +11,7 @@ const query = localStorage.getItem('title').toLowerCase();
 document.querySelector("#query").textContent=query
 document.querySelector(".answer__news_total").textContent=results.totalResults
 
-const today = new Date();
+export const today = new Date();
 const millisecondsIn24HRS = 60 * 60 * 24 * 1000;
 
 let datesStr = [] // то же смое но в формате ГГГГ - ММ - ДД

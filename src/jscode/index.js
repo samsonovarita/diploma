@@ -1,6 +1,6 @@
 import "../css/index.css";
 import { Api } from "./modules/Api.js";
-import { apiNews } from "./modules/constants.js";
+import { apiNews, today, previousWeek } from "./modules/constants.js";
 import { ResultList } from "./modules/ResultList.js";
 
 const submitButton = document.querySelector('.search__button');
