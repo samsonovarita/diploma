@@ -1,4 +1,5 @@
-import NewsCard from './NewsCard.js';
+import NewsCard from './news-card.js';
+import { pictureInRow } from './constants.js';
 
 export class ResultList {
   constructor(box) {
@@ -22,7 +23,7 @@ export class ResultList {
   }
 
   render() {
-    this.cards.slice(this.row * 3, this.row * 3 + 3).forEach((elem) => {
+    this.cards.slice(this.row * pictureInRow, this.row * pictureInRow + pictureInRow).forEach((elem) => {
       this.addCard(elem)
     })
   }
@@ -31,7 +32,7 @@ export class ResultList {
     this.row += 1;
     this.render();
     
-    if ((this.row * 3 + 3) >= this.cards.length) {
+    if ((this.row * pictureInRow + pictureInRow) >= this.cards.length) {
       this.moreButton.classList.add('results__button_hidden');
     } else {
       this.moreButton.classList.remove('results__button_hidden');

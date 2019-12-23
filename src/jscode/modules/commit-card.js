@@ -1,5 +1,5 @@
-import {createNode} from "./NewsCard.js";
-import {makeFormattedDate} from "./changeDate.js";
+import {createNode} from "./news-card.js";
+import {makeFormattedDate} from "./change-date.js";
 
 export class CommitCard {
     constructor(commit_data_item) {

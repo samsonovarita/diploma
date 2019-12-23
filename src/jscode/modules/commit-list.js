@@ -1,4 +1,4 @@
-import { CommitCard } from "./CommitCard.js";
+import { CommitCard } from "./commit-card.js";
 
 export class CommitList {
   constructor(box, commitData) {

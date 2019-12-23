@@ -1,4 +1,5 @@
 import "./../css/analysis.css";
+import { days } from './modules/constants.js';
 
 const month = ['ЯНВАРЬ', 'ФЕВРАЛЬ', 'МАРТ', 'АПРЕЛЬ', 'МАЙ', 'ИЮНЬ', 'ИЮЛЬ', 'АВГУСТ', 'СЕНТЯБРЬ', 'ОКТЯБРЬ', 'НОЯБРЬ', 'ДЕКАБРЬ'];
 const day = [ 'вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
@@ -14,15 +15,15 @@ document.querySelector(".answer__news_total").textContent=results.totalResults
 export const today = new Date();
 const millisecondsIn24HRS = 60 * 60 * 24 * 1000;
 
-let datesStr = [] // то же смое но в формате ГГГГ - ММ - ДД
-let dateLabels = [] //массив дней недели
+const datesStr = [] // то же смое но в формате ГГГГ - ММ - ДД
+const dateLabels = [] //массив дней недели
 
-//магическое число 7
+//магическое число days = 6
 
-for (let i = 0; i < 7; i++) {
-    let tempDate = new Date(today - millisecondsIn24HRS * i)
-    let tempDateStr = tempDate.getFullYear() + "-" + myGetMonth(tempDate) + "-" + myGetDate(tempDate)
-    let tempDayLabel = tempDate.getDate() + ", " + day[tempDate.getDay()]
+for (let i = 0; i <= days; i++) {
+    const tempDate = new Date(today - millisecondsIn24HRS * i)
+    const tempDateStr = tempDate.getFullYear() + "-" + myGetMonth(tempDate) + "-" + myGetDate(tempDate)
+    const tempDayLabel = tempDate.getDate() + ", " + day[tempDate.getDay()]
 
     datesStr.push(tempDateStr)
     dateLabels.push(tempDayLabel)
@@ -50,14 +51,14 @@ const dateDivs = document.querySelectorAll(".diagram__date");
 const barDivs = document.querySelectorAll(".diagram__bar");
 let totalMentions = 0
 
-for (let i = 0; i < 7; i++) {
-    dateDivs[6 - i].textContent = dateLabels[i];
+for (let i = 0; i <= days; i++) {
+    dateDivs[days - i].textContent = dateLabels[i];
     
     const resultInDay = countResultsForQueryAndDate(results.articles, query, datesStr[i]);
     totalMentions += resultInDay;
 
-    barDivs[6 - i].textContent = resultInDay;
-    barDivs[6 - i].style.width = resultInDay + "%";
+    barDivs[days - i].textContent = resultInDay;
+    barDivs[days - i].style.width = resultInDay + "%";
 }
 
 function countResultsForQueryAndDate(results, query, date) {
