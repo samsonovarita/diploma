@@ -17,6 +17,8 @@ const millisecondsIn24HRS = 60 * 60 * 24 * 1000;
 let datesStr = [] // то же смое но в формате ГГГГ - ММ - ДД
 let dateLabels = [] //массив дней недели
 
+//магическое число 7
+
 for (let i = 0; i < 7; i++) {
     let tempDate = new Date(today - millisecondsIn24HRS * i)
     let tempDateStr = tempDate.getFullYear() + "-" + myGetMonth(tempDate) + "-" + myGetDate(tempDate)

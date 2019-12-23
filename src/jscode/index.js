@@ -33,13 +33,13 @@ function activateFormButton(btnElement, state) {
     btnElement.classList.remove('search__button_active');
   }
 };
-
+document.querySelector("#searchButton").addEventListener('click', search);
 function validateInput() {
   event.preventDefault();
   if (searchField.value.length > 0) {
     document.querySelector(".search__error-message").classList.add("search__error-message_hidden");
     activateFormButton(submitButton, true);
-    document.querySelector("#searchButton").addEventListener('click', search);
+    
   }
   else {
     document.querySelector(".search__error-message").classList.remove("search__error-message_hidden");
@@ -51,6 +51,8 @@ function search(event) {
   submitButton.setAttribute('disabled', true);
   const searchInput = document.querySelector(".search__input").value;
   let request = new Api(`https://newsapi.org/v2/everything?q=${searchInput}&apiKey=${apiNews}&pageSize=100&from=${today}&to=${previousWeek}&language=ru`);
+console.log(today);
+console.log(previousWeek);
 
   document.querySelector(".preloader").classList.remove("preloader_hidden");
   document.querySelector(".error").classList.add("error_hidden");
@@ -60,13 +62,13 @@ function search(event) {
     .then(results => {
 
       document.querySelector(".preloader").classList.add("preloader_hidden");
+      //тут активировать кнопку
       document.querySelector(".results").classList.remove("results_hidden");
 
       resultList.setData(results.articles);
 
       localStorage.setItem('results', JSON.stringify(results));
       localStorage.setItem('title', searchInput);
-      document.querySelector("#searchButton").removeEventListener;
 
     })
     .catch(res => {
