@@ -1,4 +1,4 @@
-import {makeFormattedDate} from "./change-date.js";
+import {makeFormattedDate} from "../../jscode/modules/change-date.js";
 
 export function createNode(tag, tagClass) {
     const element = document.createElement(tag);

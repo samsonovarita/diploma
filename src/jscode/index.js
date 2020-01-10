@@ -1,7 +1,7 @@
 import "../css/index.css";
 import { Api } from "./modules/api.js";
 import { apiNews, today, previousWeek } from "./modules/constants.js";
-import { ResultList } from "./modules/result-list.js";
+import { ResultList } from "../style/results/result-list.js";
 
 const submitButton = document.querySelector('.search__button');
 const searchField = document.querySelector(".search__input");

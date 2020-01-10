@@ -1,14 +1,14 @@
-import { CommitCard } from "./commit-card.js";
+import { CommitCard } from "./__commit/commit-card.js";
 
 export class CommitList {
   constructor(box, commitData) {
-    this.box = box;
+    this._box = box;
     this.render(commitData);
   }
 
   addCard(commitDataItem) {
     const { cardElement } = new CommitCard(commitDataItem);
-    this.box.appendChild(cardElement);
+    this._box.appendChild(cardElement);
   }
 
   render(commitData) {

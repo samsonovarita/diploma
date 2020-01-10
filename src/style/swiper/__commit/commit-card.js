@@ -1,13 +1,13 @@
-import {createNode} from "./news-card.js";
-import {makeFormattedDate} from "./change-date.js";
+import {createNode} from "../../result-card/news-card.js";
+import {makeFormattedDate} from "../../../jscode/modules/change-date.js";
 
 export class CommitCard {
     constructor(commit_data_item) {
-        this.date = commit_data_item.commit.committer.date;
-        this.avatar_url = commit_data_item.author.avatar_url;
-        this.name = commit_data_item.commit.author.name;
-        this.email = commit_data_item.commit.author.email;
-        this.message = commit_data_item.commit.message;
+        this._date = commit_data_item.commit.committer.date;
+        this._avatar_url = commit_data_item.author.avatar_url;
+        this._name = commit_data_item.commit.author.name;
+        this._email = commit_data_item.commit.author.email;
+        this._message = commit_data_item.commit.message;
 
         this.cardElement = this.create();
     }
@@ -22,12 +22,12 @@ export class CommitCard {
         const commitEmail = createNode('div', 'swiper__email');
         const commitCommit = createNode('div', 'swiper__commit')
 
-        commitImg.src = this.avatar_url;
-        commitImg.style.backgroundImage = `url(${this.avatar_url})`;
-        commitDate.textContent = makeFormattedDate(this.date);
-        commitName.textContent = this.name;
-        commitEmail.textContent  = this.email;
-        commitCommit.textContent = this.message;
+        commitImg.src = this._avatar_url;
+        commitImg.style.backgroundImage = `url(${this._avatar_url})`;
+        commitDate.textContent = makeFormattedDate(this._date);
+        commitName.textContent = this._name;
+        commitEmail.textContent  = this._email;
+        commitCommit.textContent = this._message;
 
         commitCard.appendChild(commitDate);
         commitCard.appendChild(commitInfobox);

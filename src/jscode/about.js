@@ -1,7 +1,7 @@
 import "./../css/about.css";
 
 import { Api } from "./modules/api.js";
-import { CommitList } from "./modules/commit-list.js";
+import { CommitList } from "./../style/swiper/commit-list.js";
 import Swiper from "swiper";
 import { swiperConfig } from "./modules/swiper-config.js";
 

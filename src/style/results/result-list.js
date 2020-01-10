@@ -1,5 +1,5 @@
-import NewsCard from './news-card.js';
-import { pictureInRow } from './constants.js';
+import NewsCard from '../../style/result-card/news-card.js';
+import { pictureInRow } from '../../jscode/modules/constants.js';
 
 export class ResultList {
   constructor(box) {
