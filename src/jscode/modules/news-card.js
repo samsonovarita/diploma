@@ -8,12 +8,12 @@ export function createNode(tag, tagClass) {
 
 export default class NewsCard {
     constructor(url, urlToImage, publishedAt, title, description, source) {
-        this.url = url;
-        this.urlToImage = urlToImage;
-        this.publishedAt = publishedAt;
-        this.title = title;
-        this.description = description;
-        this.source = source;
+        this._url = url;
+        this._urlToImage = urlToImage;
+        this._publishedAt = publishedAt;
+        this._title = title;
+        this._description = description;
+        this._source = source;
         this.cardElement = this.create();
     }
 
@@ -28,12 +28,12 @@ export default class NewsCard {
         const newsCardText = createNode('p', 'result-card__text');
         const newsCardSource = createNode('p', 'result-card__source');
 
-        newsCardImage.src = this.urlToImage;
+        newsCardImage.src = this._urlToImage;
         newsCardDate.textContent = makeFormattedDate(this.publishedAt);
-        newsCardTitle.setAttribute('href', this.url);
-        newsCardTitle.textContent = this.title;
-        newsCardText.textContent  = this.description;
-        newsCardSource.textContent = this.source.name;
+        newsCardTitle.setAttribute('href', this._url);
+        newsCardTitle.textContent = this._title;
+        newsCardText.textContent  = this._description;
+        newsCardSource.textContent = this._source.name;
 
 
         newsCard.appendChild(newsCardImageSize);

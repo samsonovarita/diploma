@@ -14,7 +14,7 @@ const resultList = new ResultList(document.querySelector(".results__list"));
 checkLocalStorage();
 submitButton.classList.add('search__button_active');
 function checkLocalStorage() {
-  const results = localStorage["results"];
+  const results = localStorage.getItem('results');
   const query = localStorage.getItem('title');
 
   if (results != undefined && query != undefined) {
@@ -38,6 +38,7 @@ function activateFormButton(btnElement, state) {
   }
 };
 submitButton.addEventListener('click', search);
+
 function validateInput() {
   event.preventDefault();
   if (searchField.value.length > 0) {
@@ -78,7 +79,15 @@ function search(event) {
     })
     .catch(res => {
       preloader.classList.add("preloader_hidden");
+      if (res.toString() === "TypeError: Failed to fetch") {
+        error.classList.remove("error_hidden");
+        document.querySelector(".error__text").textContent = "Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз";
+    } else {
       error.classList.remove("error_hidden");
+      document.querySelector(".error__text").textContent = "К сожалению по вашему запросу ничего не найдено.";
+    }
+      submitButton.removeAttribute('disabled');
+      searchField.removeAttribute('disabled');
     })
 
 }
