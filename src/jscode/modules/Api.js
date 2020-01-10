@@ -1,6 +1,6 @@
 export class Api {
     constructor(url) {
-        this.url = url;
+        this._url = url;
     }
     getResponseJSON(res) {
         if (res.ok) {
@@ -10,7 +10,7 @@ export class Api {
     }
 
     getApiData() {
-        return fetch(this.url)
+        return fetch(this._url)
             .then((res) => this.getResponseJSON(res))
             .then(json => {
                 if (json.totalResults === 0) {
