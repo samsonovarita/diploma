@@ -5,6 +5,8 @@
     height: 8px;
     border-radius: 50%;
     background-color: #D1D2D6;
+    margin: 0 3px;
+    cursor: pointer;
 }
 
 .swiper__button:focus {

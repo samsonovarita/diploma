@@ -1,6 +1,6 @@
-@import url(./__title/__title.css);
-@import url(./__img/__img.css);
-@import url(./__box/__box.css);
+@import url(./__title/tech__title.css);
+@import url(./__img/tech__img.css);
+@import url(./__box/tech__box.css);
 @import url(./__item/tech__item.css);
 @import url(./__name/tech__name.css);
 .tech {

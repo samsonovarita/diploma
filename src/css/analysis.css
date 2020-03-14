@@ -1,0 +1,9 @@
+@import url(../style/vendor/normalize.css);
+@import url(../style/page/page.css);
+@import url(../style/content/content.css);
+@import url(../fonts/fonts.css);
+@import url(../style/header/header.css);
+@import url(../style/about-author/about-author.css);
+@import url(../style/footer/footer.css);
+@import url(../style/answer/answer.css);
+@import url(../style/diagram/diagram.css);

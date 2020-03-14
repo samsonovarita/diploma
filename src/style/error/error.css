@@ -1,6 +1,7 @@
 @import url(./__icon/error__icon.css);
 @import url(./__title/error__title.css);
 @import url(./__text/error__text.css);
+@import url(./_hidden/error_hidden.css);
 
 .error {
     width: 100%;

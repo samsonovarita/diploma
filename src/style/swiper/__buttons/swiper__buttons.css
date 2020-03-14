@@ -1,7 +1,6 @@
 .swiper__buttons {
-    width: 48px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0px auto 0;
 }
 

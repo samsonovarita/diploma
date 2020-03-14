@@ -1,0 +1,24 @@
+.swiper__slide-container {
+    width: calc(100% - 40px);
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .swiper__slide-container {
+        grid-gap: 8px;
+        width: calc(100% - 78px);
+    }
+}
+
+@media (max-width: 710px) {
+    .swiper__slide-container {
+
+    }
+}
+
+@media (max-width: 320px) {
+    .swiper__slide-container {
+        padding-bottom: 17px;
+        width: calc(100% - 32px);
+    }
+}
